@@ -1491,29 +1491,54 @@ body{
 @media (max-width: 600px) {
 
     .hero-visual {
+        display: flex;
         flex-direction: column;
-        height: auto;
-        min-height: 0;
-        max-height: none;
+        align-items: center;
+    }
+
+    .hero,
+    .hero-visual {
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-txt {
-        order: 1;
         width: 100%;
+        box-sizing: border-box;
+        order: 1;
         padding: 60px 5% 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-img {
         order: 2;
         width: 100%;
+        margin: 0 auto;
         height: 75vw;
         min-height: 300px;
         max-height: 550px;
     }
 
+    .hero-tit {
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
     .hero-tit h3 {
         width: 95%;
         margin-bottom: 55px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-tit h3 img {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
     .hero-tit h5 {
@@ -1526,7 +1551,10 @@ body{
     }
 
     .button-area {
-        gap: 30px;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
     }
 
     .button-area > li {
@@ -1632,11 +1660,18 @@ body{
     }
 
     .value {
+        width: 100%;
+        box-sizing: border-box;
         padding: 80px 4% 100px;
     }
 
     .value > h2 {
-        margin-bottom: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .value > h2 img {
@@ -1645,28 +1680,33 @@ body{
     }
     .value-content {
         width: 100%;
-
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: auto auto auto;
-
         column-gap: 15px;
-        row-gap: 25px;
     }
 
     .value-img {
+        grid-column: 1 / -1;
         width: 95%;
         max-width: 450px;
         margin: 10px auto;
+        justify-self: center;
     }
 
     .value-box {
         width: 100%;
+        min-width: 0;
+        align-items: center;
+        text-align: center;
     }
 
-    .value-tit {
-        gap: 5px;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
+    .value-tit,
+    .value-text {
+        width: 100%;
+        text-align: center;
     }
 
     .value-tit li:first-child {
@@ -1682,20 +1722,18 @@ body{
         line-height: 1.5;
     }
 
-    .value-box:nth-child(2) {
-        transform: translate(-20px, -15px);
-    }
-
-    .value-box:nth-child(3) {
-        transform: translate(20px, -15px);
-    }
-
+    .value-box:nth-child(2),
     .value-box:nth-child(4) {
-        transform: translate(-20px, 15px);
+        transform: translate(-10px, 0);
     }
 
+    .value-box:nth-child(3),
     .value-box:nth-child(5) {
-        transform: translate(20px, 15px);
+        transform: translate(10px, 0);
+    }
+
+    .value.show .value-box {
+        transform: translate(0, 0);
     }
 
     .value-img {

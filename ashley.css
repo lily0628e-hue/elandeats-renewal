@@ -59,8 +59,6 @@ body{font-family: 'ELandChoice';}
             background-color: #faf7f3;
         }
 
-
-
         .header-inner {
             width: 90%;
             max-width: 1440px;
@@ -79,6 +77,8 @@ body{font-family: 'ELandChoice';}
             padding: 0;
             list-style: none;
         }
+
+        .gnb-list > li > a {font-size: 20px}
 
 
 
@@ -1918,7 +1918,7 @@ TOP 버튼
                 align-items: center;
                 height: var(--header-height);
                 white-space: nowrap;
-                font-weight: 500;
+                font-weight: 700;
                 transition: color 0.3s ease;
             }
             /*gnb 대메뉴 컬러 변경 */
