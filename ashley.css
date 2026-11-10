@@ -1,0 +1,2900 @@
+@charset "utf-8";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body{
+    line-height:1;
+    }
+a{text-decoration:none; color: inherit;}
+img{border:none; vertical-align:top;}
+ul{list-style:none;}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+input, select {
+    vertical-align:middle;
+}
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    position: relative;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+body{font-family: 'ELandChoice';}
+
+/* ===============헤더================= */
+
+        /* ==================== 헤더 공통 ==================== */
+
+        .header {
+            --header-height: 70px;
+            --dropdown-height: 220px;
+            --gnb-font-size: clamp(16px, calc(15.08px + 0.2564vw), 20px);
+            --submenu-font-size: clamp(16px, calc(14.8px + 0.17vw), 18px);
+            position: relative;
+            z-index: 100;
+            background-color: #faf7f3;
+        }
+
+
+
+        .header-inner {
+            width: 90%;
+            max-width: 1440px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8rem;
+        }
+
+
+
+        .header ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+
+        .header a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+
+        .header button {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+        }
+
+
+
+        .header img {
+            display: block;
+        }
+
+
+
+        .logo {
+            width: 180px;
+            flex-shrink: 0;
+        }
+
+
+
+        .logo img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: none;
+        }
+
+        /* 네비게이션 전체 */
+        .gnb {
+            flex: 1;
+            min-width: 0;
+        }
+
+
+        /* 네비게이션 메뉴 */
+        .gnb-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+
+
+        .header .menu-btn,
+        .mobile-menu-top {
+            display: none;
+        }
+
+
+
+
+        /* ===============헤더================= */
+
+
+
+
+/* ===============메인================= */
+
+
+main{background: #faf7f3;}
+
+
+/* ==============================
+01. 메인비주얼 - PC
+============================== */
+
+/* 메인 비주얼 전체 영역 */
+.main-visual {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 콘텐츠 영역 */
+.main-visual-inner {
+    width: 100%;
+    max-width: none;
+    height: 850px;
+    margin: 0 auto;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 이미지 4장을 감싸는 부모 */
+.main-visual-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+/* 이미지 각각 */
+.main-visual-pic li {
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* 이미지 01 - 왼쪽 위 */
+.main-visual-pic li:nth-child(1) {
+    width: 22%;
+    top: 5%;
+    left: -5.5%;
+}
+
+/* 이미지 02 - 왼쪽 아래 */
+.main-visual-pic li:nth-child(2) {
+    width: 22%;
+    bottom: 0;
+    left: 7%;
+}
+
+/* 이미지 03 - 오른쪽 위 */
+.main-visual-pic li:nth-child(3) {
+    width: 22%;
+    top: 0;
+    right: 6%;
+}
+
+/* 이미지 04 - 오른쪽 아래 */
+.main-visual-pic li:nth-child(4) {
+    width: 22%;
+    top: 35%;
+    right: -5.5%;
+}
+
+/* 중앙 로고 */
+.main-v-logo {
+    width: 25%;
+    position: relative;
+    z-index: 2;
+}
+
+.main-v-logo img {
+    width: 100%;
+    display: block;
+}
+
+/* 스크롤 아이콘 */
+.main-v-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.main-v-scroll img {
+    width: 40px;
+
+    animation: scrollMove 0.8s ease-in-out infinite alternate;
+}
+
+/* 스크롤 애니메이션 */
+@keyframes scrollMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(15px);
+    }
+}
+
+/* 이미지 기본 상태 */
+.main-visual-pic li img {
+    display: block;
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+/* 마우스를 올렸을 때 */
+.main-visual-pic li:hover img {
+    transform: scale(1.05);
+}
+
+/* 태블릿용 어두운 배경 이미지 */
+.main-visual-inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/tablet-main-visual.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* ==============================
+02-1. 인트로&시그니처 포함된 백그라운드
+============================== */
+
+.back-navy-area {
+    width: 100%;
+    background-color: var(--ashley-blue);
+
+    background-image: url("images/section-navy-texture.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    /* 상단 남색 여백 */
+    padding-top: 6rem; 
+}
+
+
+
+
+/* ==============================
+02-2. 브랜드 인트로 영역 종이 배경
+============================== */
+
+
+.brand-paper-area {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+
+
+    background-image: url("images/section-paper-set.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    padding-bottom: 6rem;
+}
+
+
+
+
+/* ==============================
+02-3. 브랜드 인트로
+============================== */
+
+/* 브랜드 인트로 전체 */
+.brand-intro {width: 100%;}
+
+/* 브랜드 콘텐츠 영역 */
+.brand-intro-inner {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 브랜드 타이틀 */
+
+/* PC 브랜드 타이틀 롤링 배너 */
+
+.brand-title {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 4rem;
+
+    margin-top: 6rem;
+}
+
+/* 움직이는 전체 영역 */
+.brand-title-track {
+    display: flex;
+    width: max-content;
+
+    animation: brandRolling 30s linear infinite;
+}
+
+/* 타이틀 한 묶음 */
+.brand-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 3rem;
+    flex-shrink: 0;
+}
+
+/* 타이틀 이미지 */
+.brand-title-group img {
+    display: block;
+    width: auto;
+    height: 180px;
+    max-width: none;
+    flex-shrink: 0;
+}
+
+/* 왼쪽에서 오른쪽으로 이동 */
+@keyframes brandRolling {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* 브랜드 상징물 */
+.brand-id {
+    width: 750px;
+    max-width: 80%;
+    margin-bottom: 4rem;
+}
+
+.brand-id img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 브랜드 소개 텍스트 */
+.brand-txt {
+    width: 90%;
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    color: var(--color-black);
+    text-align: center;
+    margin-bottom: 4rem;
+
+    font-weight: 300;
+}
+
+/* 한글 소개 */
+.brand-txt li:nth-child(1) {
+    font-size: clamp(16px, 2.5vw, 32px);
+    line-height: 1.25;
+    word-break: keep-all;
+}
+
+/* 장식 문양 */
+.brand-txt li:nth-child(2) img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+/* 영문 소개 */
+.brand-txt li:nth-child(3) {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.5;
+}
+
+
+
+
+
+/* ==============================
+03. 시그니처 어워드
+============================== */
+
+
+/* 시그니처 어워드 전체 */
+.signature-award {
+    width: 100%;
+    padding: 3rem 0 8rem;
+}
+
+/* 콘텐츠 영역 */
+.signature-award-inner {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+/* 최상단 정보 3개 */
+
+.award-top {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5rem;
+    margin-bottom: 12rem;
+}
+
+.award-top li {
+    width: 33.333%;
+    color: var(--color-white);
+    font-size: clamp(13px, 2vw, 22px);
+    letter-spacing: 0.05rem;
+    font-weight: 300;
+}
+
+/* 왼쪽 */
+.award-top li:nth-child(1) {
+    text-align: left;
+}
+
+/* 가운데 */
+.award-top li:nth-child(2) {
+    text-align: center;
+}
+
+/* 오른쪽 */
+.award-top li:nth-child(3) {
+    text-align: right;
+}
+
+
+
+/* 어워드 메인 타이틀 & 설명 */
+
+.award-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 1rem;
+}
+
+/* 날짜 */
+.award-txt li:nth-child(1) {
+    color: var(--color-white);
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 300;
+}
+
+/* SIGNATURE AWARD */
+.award-txt h2 {
+    color: var(--ashley-yellow);
+    font-size: clamp(34px, 6vw, 134px);
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    margin: 2rem 0 2rem;
+}
+
+/* 설명 */
+.award-txt p {
+    color: var(--color-white);
+    font-size: clamp(16px, 2.5vw, 28px);
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+
+/* 액자 3개 전체 영역 */
+.award-frame-list {
+    width: 90%;
+    max-width: 1200px;
+    margin: 6rem auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* 액자 공통 */
+
+.award-frame img {
+    display: block;
+    width: 100%;
+}
+
+/* 좌측 피자 */
+.pizza-frame {
+    width: 30%;
+    transform: rotate(-8deg);
+}
+
+/* 중앙 치킨 */
+.chicken-frame {
+    width: 55%;
+    z-index: 2;
+}
+
+/* 우측 샐러드 */
+.salad-frame {
+    width: 30%;
+    transform: rotate(8deg);
+}
+
+
+
+/* 중앙 액자 링크 */
+.award-vote {
+    display: block;
+    position: relative;
+}
+
+/* hover 이미지 겹치기 */
+.chicken-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Vote Now 버튼 */
+.vote-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 0.8rem 1.2rem;
+    background-color: var(--ashley-red);
+    color: var(--color-white);
+
+    font-size: clamp(18px, 2vw, 26px);
+    white-space: nowrap;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 3;
+}
+
+/* 마우스를 올리면 이미지 변경 */
+.award-vote:hover .chicken-hover {
+    opacity: 1;
+}
+
+/* 마우스를 올리면 버튼 등장 */
+.award-vote:hover .vote-btn {
+    opacity: 1;
+}
+
+/* 키보드로 선택했을 때도 표시 */
+.award-vote:focus-visible .chicken-hover,
+.award-vote:focus-visible .vote-btn {
+    opacity: 1;
+}
+
+/* 중앙 치킨 마우스를 올리면 확대 */
+.chicken-frame:hover {
+    transform: scale(1.01);
+}
+
+/* 태블릿 전용 투표 버튼 */
+.award-mobile-vote {
+    display: none;
+}
+
+/* 액자 크기와 위치가 부드럽게 변경 */
+.award-frame-list {
+    transition: width 0.5s ease, margin 0.5s ease;
+}
+
+.award-frame {
+    flex-shrink: 0;
+
+    transition:
+        width 0.5s ease,
+        left 0.5s ease,
+        right 0.5s ease,
+        transform 0.5s ease,
+        opacity 0.4s ease;
+}
+
+
+
+/* ========================
+04. ASHLEY NOW
+======================== */
+
+/* 전체 섹션 */
+.ashley-now {
+    width: 100%;
+    padding: 8rem 0;
+    background-color: #faf7f3;
+}
+
+/* 전체 콘텐츠 영역 */
+.ashley-now-inner {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 65px;
+    column-gap: 0;
+    row-gap: 1.5rem;
+}
+
+/* ASHLEY NOW 타이틀 */
+
+.now-title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 1rem;
+}
+
+.now-title img {
+    display: block;
+    width: 65%;
+    max-width: 900px;
+    height: auto;
+}
+
+/* 이벤트 / 뉴스 콘텐츠 */
+
+.tab-content {
+    grid-column: 1;
+    grid-row: 2;
+
+    min-width: 0;
+    padding: 3rem 2rem;
+
+    border: 1px solid #aaa;
+    border-radius: 15px 0 0 15px;
+    box-sizing: border-box;
+}
+
+/* 선택되지 않은 콘텐츠 숨기기 */
+.tab-event-list,
+.tab-news-list {
+    display: none;
+}
+
+/* 선택된 콘텐츠만 표시 */
+.tab-event-list.active,
+.tab-news-list.active {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* 카드 공통 */
+.tab-event-list li,
+.tab-news-list li {
+    min-width: 0;
+    text-align: center;
+}
+
+/* 카드 이미지 링크 */
+.tab-event-list li a,
+.tab-news-list li a {
+    display: block;
+}
+
+/* 카드 이미지 */
+.tab-event-list img,
+.tab-news-list img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 카드 소제목 */
+.tab-sub-txt {
+    margin-top: 1.5rem;
+    font-size: clamp(16px, 1.2vw, 20px);
+    color: var(--color-gray);
+}
+
+/* 카드 제목 */
+.tab-event-list h3,
+.tab-news-list h3 {
+    margin-top: 0.5rem;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 600;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+/* 카드 날짜 */
+.tab-sub-day {
+    margin-top: 0.5rem;
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--color-gray);
+}
+
+/* EVENTS / NEWS 탭 버튼 */
+
+.now-tab-menu {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: start;
+}
+
+/* 버튼 공통 */
+.now-tab-btn {
+    width: 100%;
+    min-height: 110px;
+
+    padding: 1.5rem 0.5rem;
+    box-sizing: border-box;
+
+    border: 1px solid #aaa;
+    background-color: #faf7f3;
+    color: var(--ashley-red);
+
+    writing-mode: vertical-rl;
+    cursor: pointer;
+
+    font-family: 'ELandChoice';
+    font-size: clamp(16px, 2vw, 26px);
+    letter-spacing: 0.2rem;
+}
+
+/* 첫 번째 버튼 */
+.now-tab-btn:first-child {
+    border-radius: 0 12px 0 0;
+}
+
+/* 두 번째 버튼 */
+.now-tab-btn:last-child {
+    border-radius: 0 0 12px 0;
+}
+
+/* 선택된 버튼 */
+.now-tab-btn.active {
+    background-color: var(--ashley-red);
+    color: var(--ashley-ivory);
+    border-color: var(--ashley-red);
+}
+
+/* 하단 더보기 */
+
+.tab-now-more {
+    grid-column: 1;
+    grid-row: 3;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tab-now-more a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tab-now-more h3 {
+    font-size: clamp(18px, 1.2vw, 20px);
+    font-weight: 400;
+}
+
+.tab-now-more img {
+    display: block;
+    width: 24px;
+}
+
+
+
+
+/* ==============================
+05. 애슐리 신메뉴 
+============================== */
+
+.new-season-menu {
+    width: 100%;
+    padding: 8rem 0;
+    overflow: hidden;
+}
+
+.season-menu-inner {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* 신메뉴 타이틀 */
+.season-menu-inner h2 {
+    font-size: clamp(30px, 5.2vw, 90px);
+    font-weight: 700;
+    color: var(--ashley-blue);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 5rem;
+}
+
+
+/* 롤링 될 영역 */
+.season-list {
+    display: flex;
+    width: max-content;
+    gap: 0;
+
+    animation: seasonRolling 40s linear infinite;
+}
+
+/* 메뉴 카드 */
+.season-list li {
+    width: calc((min(90vw, 1440px) - 4rem) / 3);
+    flex-shrink: 0;
+    text-align: center;
+
+    margin-right: 5rem;
+}
+
+/* 메뉴 이미지 */
+.season-list li img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem;
+}
+
+/* 한글 메뉴명 */
+.season-list h3 {
+    font-size: clamp(20px, 2vw, 32px);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    word-break: keep-all;
+}
+
+/* 영문 메뉴명 */
+.menu-en {
+    font-size: clamp(18px, 1.5vw, 24px);
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* 메뉴 설명 */
+.menu-desc {
+    font-size: clamp(18px, 1vw, 22px);
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 롤링 애니메이션 */
+@keyframes seasonRolling {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* 마우스를 올리면 일시정지 */
+.season-list:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+/* ==============================
+06. 그랜드 오픈 
+============================== */
+
+/* 전체 섹션 */
+.grand-open {
+    width: 100%;
+
+    margin-bottom: 10rem;
+}
+
+/* 콘텐츠 영역 */
+.grand-open-inner {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* 타이틀 */
+.grand-open-title {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.grand-open-title img {
+    display: block;
+    width: 80%;
+    max-width: 1500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 매장 이미지 2열 */
+.grand-pic {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: center;
+}
+
+/* 매장 이미지 */
+.grand-pic img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.4s ease;
+}
+
+.grand-pic img:hover {
+    transform: translateY(-30px);
+}
+
+
+
+
+/* ==============================
+07. 매장찾기 섹션
+============================== */
+
+/* 붉은 배경 */
+.store-finder {
+    width: 100%;
+    min-height: 950px;
+
+    background-image: url("images/bottom-ashley-back.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 종이와 버튼을 감싸는 영역 */
+.store-finder-inner {
+    width: 65%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* 종이 로고 이미지 */
+.finder-paper {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 매장 찾기 버튼 */
+.finder-button {
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.7rem 2rem;
+    border: 2px solid var(--ashley-blue);
+    border-radius: 5px;
+
+    color: var(--ashley-blue);
+    background-color: transparent;
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-size: clamp(14px, 1.5vw, 26px);
+
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* 돋보기 아이콘 */
+.finder-button img {
+    display: block;
+    width: 30px;
+    height: auto;
+}
+
+.finder-button:hover img {
+    content: url("images/bottom-icon-search-hover.png");
+}
+
+/* 버튼 Hover */
+.finder-button:hover {
+    background-color: var(--ashley-blue);
+    color: var(--color-white);
+}
+
+
+
+
+/* ==========================
+TOP 버튼
+========================== */
+
+.top-btn {
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+
+    width: 50px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    z-index: 999;
+
+    /* 처음에는 숨기기 */
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* 버튼 이미지 */
+.top-btn img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 스크롤하면 나타나는 상태 */
+.top-btn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ===============메인================= */
+
+
+
+
+/* ===============푸터================= */
+        /* ------------------------------footer---------------------------------------- */
+
+        /* 01. ----------------FOOTER COMMON------------------ */
+
+        .footer {
+            width: 100%;
+            overflow: hidden;
+
+            background-color: var(--ashley-blue);
+        }
+
+        .footer-main {
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            background-color: var(--footer-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .footer-main::after {
+            content: "";
+            position: absolute;
+            inset: clamp(12px, 2vw, 30px);
+            border: 2px solid var(--ashley-ivory);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+
+        /* 02. -------------------FLOWER---------------- */
+
+        .flower {
+            position: absolute;
+            top: 60%;
+            right: clamp(35px, 7.8vw, 150px);
+            transform: translateY(-50%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .left-flower {
+            left: clamp(35px, 7.8vw, 150px);
+            right: auto;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .flower img {
+            display: block;
+            width: clamp(70px, 5.2vw, 100px);
+            height: auto;
+            transform-origin: center bottom;
+            animation: flowerSway 4s ease-in-out infinite;
+        }
+
+        @keyframes flowerSway {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        .left-flower img {
+            animation-delay: -2s;
+        }
+
+
+        /* 03. ---------------FOOTER LAYOUT-------------- */
+
+        .footer-inner {
+            position: relative;
+            z-index: 2;
+            width: min(calc(100% - 600px), 1400px);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.15fr 1fr;
+            grid-template-rows: auto auto;
+            align-items: center;
+            column-gap: 40px;
+            row-gap: 0;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-info-left {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .footer-info-right {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .footer-info p {
+            width: 100%;
+            color: var(--ashley-ivory);
+            font-size: clamp(16px, 1.2vw, 18px);
+            font-weight: 300;
+            line-height: 1.5;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        /* 04. ---------------BRAND BUTTONS--------------------- */
+
+        .footer-brand-buttons {
+            grid-column: 1 / 4;
+            grid-row: 2;
+            display: grid;
+            grid-template-columns: 1fr 1.15fr 1fr;
+            column-gap: 40px;
+            align-items: center;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .footer-brand-btn {
+            font-family: "Abyssinica SIL";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 40px;
+
+            color: var(--ashley-ivory);
+            border: 2px solid var(--ashley-ivory);
+            font-size: clamp(16px, 2vw, 20px);
+            box-sizing: border-box;
+            white-space: nowrap;
+            transition:
+                background-color 0.35s ease,
+                color 0.35s ease,
+                border-color 0.35s ease;
+        }
+
+        .footer-brand-btn:first-child {
+            grid-column: 1;
+            justify-self: center;
+        }
+
+        .footer-brand-btn:last-child {
+            grid-column: 3;
+            justify-self: center;
+        }
+
+        .footer-brand-btn:hover,
+        .footer-brand-btn:focus-visible {
+            background-color: var(--color-burgundy);
+            color: var(--ashley-ivory);
+            border-color: var(--color-burgundy);
+        }
+
+
+        /* -------------------05. ENVELOPE--------------- */
+
+        .footer-envelope-wrap {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-envelope {
+            position: relative;
+            width: min(100%, 300px);
+            aspect-ratio: 300 / 489;
+            cursor: pointer;
+            isolation: isolate;
+        }
+
+        .envelope-letter {
+            position: absolute;
+            left: 1%;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            transform: translateY(20px);
+            transition: transform 0.8s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        .letter-paper {
+            display: block;
+            width: 98%;
+            height: 100%;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        .letter-content {
+            position: absolute;
+            top: 30%;
+            left: 8%;
+            width: 84%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(15px);
+            transition:
+                opacity 0.4s ease,
+                transform 0.5s ease;
+        }
+
+        .letter-content p {
+            font-family: 'ELandNice';
+            font-size: clamp(16px, 1.2vw, 22px);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: var(--color-burgundy);
+        }
+
+        .letter-content a {
+            margin-top: 5px;
+            font-size: clamp(16px, 1vw, 18px);
+            font-family: "Abyssinica SIL";
+            color: var(--color-burgundy);
+        }
+
+        .envelope-front {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            z-index: 3;
+            pointer-events: none;
+            transform: translateY(80px);
+        }
+
+        .stamp {
+            position: absolute;
+            left: 40%;
+            top: 55%;
+            width: 20%;
+            z-index: 100;
+            filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.171));
+        }
+
+        .envelope-open {
+            position: absolute;
+            top: 42%;
+            left: 48%;
+            transform: translate(-50%, -50%);
+            z-index: 200;
+            font-family: 'Bickham Script Pro Semibold';
+            font-size: 50px;
+            letter-spacing: -2px;
+            color: var(--color-burgundy);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: none;
+            transition:
+                opacity 0.4s ease,
+                visibility 0.4s ease;
+        }
+
+
+        /* 06. --------------ENVELOPE HOVER---------------- */
+
+        .footer-envelope:hover .envelope-letter,
+        .footer-envelope:focus-within .envelope-letter,
+        .footer-envelope:focus .envelope-letter {
+            transform: translateY(-3%);
+        }
+
+        .footer-envelope:hover .letter-content,
+        .footer-envelope:focus-within .letter-content,
+        .footer-envelope:focus .letter-content {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+
+        .footer-envelope:hover .envelope-open,
+        .footer-envelope:focus-within .envelope-open,
+        .footer-envelope:focus .envelope-open {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+
+        /* 07. ----------------MOBILE CONTACT----------------- */
+
+        .footer-mobile-contact {
+            display: none;
+        }
+
+        .footer-mobile-contact p,
+        .footer-mobile-contact a {
+            color: var(--ashley-ivory);
+        }
+
+        .footer-mobile-contact a:hover,
+        .footer-mobile-contact a:focus-visible {
+            text-decoration: underline;
+        }
+
+
+        /* 08. ---------------COPYRIGHT----------------- */
+
+        .footer-bottom {
+            width: 100%;
+            background-color: var(--color-burgundy);
+        }
+
+        .footer-bottom-inner {
+            width: min(calc(100% - 50px), 1100px);
+            min-height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--ashley-ivory);
+        }
+
+        .footer-bottom-inner span {
+            font-family: "against";
+            font-size: clamp(16px, 2vw, 18px);
+            white-space: nowrap;
+        }
+
+
+/* ===============푸터================= */
+
+
+
+
+
+
+/* ============== 반응형 ================ */
+/* --------------------------------타블렛 반응형 ----------------------------------- */
+
+
+
+@media (max-width: 1024px) {
+
+
+/* ===============헤더================= */
+            .header-inner {
+                width: 90%;
+                max-width: 1460px;
+            }
+            .logo {
+                width: clamp(150px, 12vw, 230px);
+            }
+            .gnb {
+                width: 70%;
+                font-size: var(--gnb-font-size);
+            }
+/* ===============헤더================= */
+
+
+
+
+
+    /* ==========================
+    메인비주얼
+    ========================== */
+
+
+    .main-visual-inner {
+        height: 100svh;
+    }
+
+    /* 어두운 태블릿 배경 나타나기 */
+    .main-visual-inner::before {
+        opacity: 1;
+    }
+
+    /* 기존 PC 음식 이미지 숨기기 */
+    .main-visual-pic {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* 중앙 로고 */
+    .main-v-logo {
+        width: 55%;
+    }
+
+    /* 메인비주얼 이미지 호버 효과 제거 */
+    .main-visual-pic li:hover img {
+        transform: none;
+    }
+
+
+
+
+    /* ============  
+    애슐리 브랜드 인포 정렬  
+    ============== */
+
+    /* 롤링 애니메이션 제거 */
+    .brand-title-track {
+        animation: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 첫 번째 묶음만 표시 */
+    .brand-title-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    /* 복제한 묶음 숨기기 */
+    .brand-title-group:nth-child(2) {
+        display: none;
+    }
+
+    /* 타이틀 이미지 */
+    .brand-title-group img {
+        width: auto;
+        height: auto;
+        max-width: 90%;
+    }
+
+
+
+
+/* ==========================
+시그니처 어워드 태블릿
+========================== */
+
+.signature-award {
+    overflow: hidden;
+    padding-bottom: 5rem;
+}
+
+/* 상단 정보 */
+.award-top {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+/* 타이틀과 설명 */
+.award-txt {
+    gap: 1rem;
+}
+
+.award-txt h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 1rem 0;
+}
+
+.award-txt p {
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.6;
+}
+
+/* 태블릿 투표 버튼 */
+.award-mobile-vote {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+
+    background-color: var(--ashley-red);
+    color: var(--color-white);
+    border-radius: 4px;
+
+    font-size: clamp(14px, 2vw, 18px);
+    text-align: center;
+}
+
+/* 액자 전체 */
+.award-frame-list {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 4rem auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+/* 중앙 액자 */
+.chicken-frame {
+    width: 86%;
+    position: relative;
+    z-index: 3;
+    transform: none;
+}
+
+/* 양옆 액자 */
+.pizza-frame,
+.salad-frame {
+    width: 45%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* 왼쪽 */
+.pizza-frame {
+    left: -20%;
+    transform: rotate(-12deg);
+}
+
+/* 오른쪽 */
+.salad-frame {
+    right: -20%;
+    transform: rotate(12deg);
+}
+
+/* 호버 효과 제거 */
+.chicken-frame:hover {
+    transform: none;
+}
+
+.award-vote:hover .chicken-hover,
+.award-vote:focus-visible .chicken-hover {
+    opacity: 0;
+}
+
+.award-vote:hover .vote-btn,
+.award-vote:focus-visible .vote-btn {
+    opacity: 0;
+}
+
+
+
+
+    /* ============  
+    애슐리 나우 탭메뉴 타블렛 정렬  
+    ============== */
+
+    /* 전체 영역 */
+    .ashley-now {
+        padding: 5rem 0;
+    }
+
+    .ashley-now-inner {
+        width: 90%;
+        max-width: 1440px;
+
+        grid-template-columns: minmax(0, 1fr);
+        column-gap: 0;
+        row-gap: 0;
+    }
+
+    /* 타이틀 */
+    .now-title {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 2rem;
+    }
+
+    .now-title img {
+        width: 65%;
+        max-width: 100%;
+    }
+
+    /* 탭 버튼을 오른쪽 상단으로 이동 */
+    .now-tab-menu {
+        grid-column: 1;
+        grid-row: 2;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        align-self: auto;
+        margin-bottom: -1px;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    /* 버튼 공통 */
+    .now-tab-btn {
+        width: auto;
+        min-height: 0;
+        padding: 0.5rem 1.5rem;
+
+        writing-mode: horizontal-tb;
+
+        font-size: clamp(12px, 1.8vw, 16px);
+        line-height: 1.2;
+    }
+
+    /* 첫 번째 버튼 */
+    .now-tab-btn:first-child {
+        border-radius: 10px 0 0 0;
+    }
+
+    /* 두 번째 버튼 */
+    .now-tab-btn:last-child {
+        border-radius: 0 10px 0 0;
+    }
+
+    /* 카드 콘텐츠 영역 */
+    .tab-content {
+        grid-column: 1;
+        grid-row: 3;
+
+        padding: 1.5rem 1rem 2.5rem;
+
+        border-radius: 10px 0 10px 10px;
+    }
+
+    /* 카드 2열 배치 */
+    .tab-event-list.active,
+    .tab-news-list.active {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 1rem;
+        row-gap: 2rem;
+    }
+
+    /* 더보기 */
+    .tab-now-more {
+        grid-column: 1;
+        grid-row: 4;
+
+        margin-top: 1rem;
+    }
+
+
+
+
+
+
+    /* ============  
+    애슐리 신메뉴 타블렛 정렬  
+    ============== */
+
+    .season-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3rem 2rem;
+
+        animation: none;
+        transform: none;
+    }
+
+    .season-list li {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* 복제된 메뉴 숨기기 */
+    .season-list li:nth-child(n+9) {
+        display: none;
+    }
+
+
+
+
+
+    /* ============  
+    타블렛 애슐리 그랜드 오픈  
+    ============== */
+
+
+    .grand-open {
+        padding: 6rem 0;
+    }
+
+    .grand-open-title {
+        margin-bottom: 3rem;
+    }
+
+    .grand-open-title img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .grand-pic {
+        gap: 1.5rem;
+    }
+
+.grand-pic img:hover {
+    transform: none;
+}
+
+
+
+
+    /* ==========================
+    타블렛 매장찾기 
+    ========================== */
+.store-finder {
+        min-height: 550px;
+    }
+
+    .store-finder-inner {
+        width: 75%;  
+    }
+
+    .finder-button {
+        padding: 0.5rem 1rem;
+        bottom: 16%;
+    }
+
+    .finder-button img {
+    width: 24px;
+}
+
+
+    /* ==========================
+    타블렛 탑버튼
+    ========================== */
+    .top-btn {
+        width: 40px;
+        right: 4%;
+        bottom: 3%;
+    }
+}
+/* -------------------------------- 타블렛에서 모바일이 넘어가는 영역 ----------------------------------- */
+
+
+
+/* 액자 자연스럽게 사라지게*/
+@media (min-width: 769px) and (max-width: 850px) {
+    .pizza-frame,
+    .salad-frame {
+        opacity: 0.4;
+    }
+}
+
+
+        /* ==================== 헤더 태블릿 · 768~1023px ==================== */
+
+        @media (768px <= width < 1024px) {
+            .header-inner {
+                width: 90%;
+            }
+            .logo {
+                width: clamp(120px, 15vw, 150px);
+            }
+            .gnb {
+                width: 70%;
+                font-size: var(--gnb-font-size);
+            }
+
+        }
+
+/* --------------------------------모바일 헤더 ----------------------------------- */
+
+
+        /* ==================== PC · 태블릿 드롭다운 ==================== */
+
+        @media (min-width: 1025px) {
+            .gnb-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .gnb-list > li {
+                position: relative;
+            }
+            .gnb-list > li > a {
+                display: flex;
+                align-items: center;
+                height: var(--header-height);
+                white-space: nowrap;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            /*gnb 대메뉴 컬러 변경 */
+            .gnb-list > li > a:hover {
+                color: var(--ashley-red, #871E22);
+            }
+            .header::before {
+                content: "";
+                position: absolute;
+                inset: 100% 0 auto;
+                height: var(--dropdown-height);
+                background-color: #faf7f3;
+                box-shadow: 0 8px 12px rgb(0 0 0 / 5%);
+            }
+            .gnb .sub-menu {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: max-content;
+                min-width: 100%;
+                height: var(--dropdown-height);
+                padding: 18px 8px;
+                transform: translateX(-50%);
+                text-align: center;
+                font-size: var(--submenu-font-size);
+                color: var(--color-deep-gray);
+            }
+            .sub-menu a {
+                display: block;
+                padding: 8px 0;
+                font-weight: 400;
+                transition: color 0.2s ease;
+            }
+            .sub-menu a:hover {
+                font-weight: 600;
+                color: var(--ashley-red);
+            }
+            .header::before,
+            .gnb .sub-menu {
+            display: block;
+            visibility: hidden;
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 0.4s ease, visibility 0s linear 0.4s;
+            }
+
+            .header.is-dropdown-open::before,
+            .header.is-dropdown-open .sub-menu {
+            visibility: visible;
+            clip-path: inset(0);
+            transition-delay: 0s;
+            }
+        }
+
+        /* ==================== 모바일 · 768px 미만 ==================== */
+
+        @media (width < 768px) {
+            .logo {
+                width: clamp(120px, 33vw, 150px);
+            }
+            .header .menu-btn,
+            .header .mobile-menu-close {
+                display: grid;
+                place-items: center;
+                width: 44px;
+                height: 44px;
+            }
+            .menu-btn img {
+                width: 26px;
+                height: 26px;
+                object-fit: contain;
+            }
+            /* 헤더 오른쪽 위에서 열리는 흰색 패널 */
+            .gnb {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: min(100%, 266px);
+                height: 100dvh;
+                box-sizing: border-box;
+                overflow-y: auto;
+
+                font-size: var(--gnb-font-size);
+                background-color: #faf7f3;
+                text-align: right;
+            }
+            .header.is-mobile-open .gnb {
+                display: block;
+            }
+            .mobile-menu-top {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 8px;
+            }
+            .header .mobile-menu-close {
+                justify-items: end;
+            }
+            .mobile-menu-close img {
+                width: 18px;
+                height: 18px;
+                object-fit: contain;
+            }
+            .mobile-menu-logo img {
+                height: auto;
+            }
+
+            .gnb-list > li > a,
+            .gnb-list > li > .submenu-toggle {
+                display: block;
+                width: 100%;
+                padding: 6px 0;
+                font-size: var(--gnb-font-size);
+                font-weight: 700;
+                line-height: 1.3;
+                text-align: right;
+            }
+            .gnb .sub-menu {
+                display: block;
+                max-height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                padding: 0;
+                transition: max-height 0.3s ease, padding 0.3s ease,
+                visibility 0s linear 0.25s;
+            }
+            .submenu-toggle[aria-expanded="true"] + .sub-menu {
+                visibility: visible;
+                padding: 2px 0 4px;
+                transition-delay: 0s;
+            }
+            .sub-menu a {
+                display: block;
+                padding: 5px 0;
+                font-size: var(--submenu-font-size);
+                line-height: 1.3;
+            }
+            .sub-menu a:hover,
+            .sub-menu a:active {
+                color: var(--color-black);
+                font-weight: 700;
+            }
+        }
+
+
+/* --------------------------------모바일 반응형 ----------------------------------- */
+
+
+@media (max-width: 768px) {
+
+    /* ============  
+    애슐리 브랜드 인포 정렬  
+    ============== */
+
+    .brand-title-group {
+        gap: 0.5rem;
+    }
+
+    /* 브랜드 인포 텍스트 */
+    .brand-txt {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .brand-txt li {
+        white-space: normal;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+    .brand-txt li:nth-child(1) {
+        font-size: clamp(16px, 3vw, 18px);
+        line-height: 1.8;
+    }
+
+    .brand-txt li:nth-child(3) {
+        font-size: clamp(14px, 2.5vw, 16px);
+        line-height: 1.7;
+    }
+
+    /* 브랜드 인포 텍스트 br 띄워둔거 제거 */
+        .brand-txt br {
+        display: none;
+    }
+
+
+
+
+
+    /* ==========================
+    시그니처 어워드 모바일
+    ========================== */
+
+/* 전체 섹션 */
+.signature-award {
+    padding: 2rem 0 5rem;
+    overflow: hidden;
+}
+
+/* 상단 정보 */
+.award-top {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+/* 날짜, 타이틀, 설명 */
+.award-txt {
+    gap: 0.8rem;
+}
+
+.award-txt h2 {
+    font-size: clamp(38px, 7vw, 42px);
+    margin: 1rem 0;
+}
+
+.award-txt p {
+    font-size: clamp(16px, 3vw, 18px);
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 설명 줄바꿈 자연스럽게 */
+.award-txt p br {
+    display: none;
+}
+
+/* Vote Now 버튼 */
+.award-mobile-vote {
+    margin: 2rem auto 0;
+    padding: 0.7rem 1.5rem;
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+/* 액자 전체 */
+.award-frame-list {
+    width: 100%;
+    margin: 3rem auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 중앙 액자만 크게 */
+.chicken-frame {
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 3;
+}
+
+/* 양옆 액자 숨기기 */
+.pizza-frame,
+.salad-frame {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 호버 확대 방지 */
+.chicken-frame:hover {
+    transform: none;
+}
+
+
+
+
+    /* ============  
+    애슐리 나우 프로모션 모바일 정렬  
+    ============== */
+    .ashley-now {
+        padding: 4rem 0;
+    }
+
+    .ashley-now-inner {
+        width: 95%;
+    }
+
+    /* 타이틀 */
+    .now-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .now-title img {
+        width: 100%;
+    }
+
+    /* 탭 버튼 */
+    .now-tab-btn {
+        letter-spacing: 0.15rem;
+        font-size: clamp(14px, 2.5vw, 18px);
+    }
+
+    /* 콘텐츠 */
+    .tab-content {
+        padding: 1rem 0.6rem 2rem;
+    }
+
+    /* 2열 유지 */
+    .tab-event-list.active,
+    .tab-news-list.active {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 0.5rem;
+        row-gap: 1.5rem;
+    }
+
+    .tab-now-more img {
+        width: 20px;
+    }
+
+
+/* 카드 소제목 */
+.tab-sub-txt {
+    margin-top: 1rem;
+}
+
+/* 카드 제목 */
+.tab-event-list h3,
+.tab-news-list h3 {
+    margin-top: 0.3rem;
+}
+
+/* 카드 날짜 */
+.tab-sub-day {
+    margin-top: 0.3rem;
+}
+
+
+
+    /* ============  
+    애슐리 신메뉴 모바일 정렬  
+    ============== */
+
+    .season-list {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .season-menu-inner h2 {
+        margin-bottom: 3rem;
+    }
+
+    /* ============  
+    모바일 애슐리 그랜드 오픈  
+    ============== */
+
+    .grand-open {
+        padding: 4rem 0;
+    }
+
+    .grand-open-title {
+        margin-bottom: 2rem;
+    }
+
+
+    .grand-pic {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+
+    /* ==================
+    모바일 애슐리 매장 찾기 
+    =====================*/
+.store-finder-inner {
+    width: 93%;
+}
+
+.finder-button {
+    bottom: 15%;
+
+    padding:
+        clamp(0.35rem, 1.52vw, 0.5rem)
+        clamp(0.7rem, 3.04vw, 1rem);
+
+    gap: clamp(0.2rem, 0.87vw, 0.3rem);
+    font-size: clamp(12px, 3.26vw, 18px);
+    border-width: 1px;
+}
+
+.finder-button img {
+    width: clamp(12px, 3.26vw, 14px);
+}
+
+}
+
+
+/* 모바일에서 매장찾기 버튼 제대로 보이게! */
+/* 
+@media (max-width: 368px){
+
+    
+    .store-finder-inner {
+        width: 93%;
+    }
+
+    .finder-button {
+        bottom: 15%;
+        gap: 0.2rem;
+        padding: 0.35rem 0.7rem;
+        font-size: clamp(12px, 2.5vw, 18px);
+        border-width: 1px;
+    }
+
+    .finder-button img {
+        width: 12px;
+    }
+
+}
+ */
+
+
+/* 태블릿 + 모바일 헤더 ------------------------------- */
+@media (max-width: 1024px) {
+
+    /* 헤더 */
+    .header-inner {
+        width: 90%;
+        min-height: 80px;
+
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* 햄버거 버튼 표시 */
+    .header .menu-btn {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+    }
+
+    /* 오른쪽 메뉴 패널 */
+    .header .gnb {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: min(80vw, 320px);
+        height: 100dvh;
+        box-sizing: border-box;
+        padding: 1rem 2rem 3rem;
+
+        overflow-y: auto;
+        background: #faf7f3;
+        z-index: 200;
+
+        text-align: right;
+    }
+
+    /* 태블릿 & 모바일 메뉴 내부 로고 */
+    .mobile-menu-logo img {
+        width: 160px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* 메뉴 상단 로고와 닫기 버튼 */
+    .mobile-menu-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+/* 태블릿 닫기 버튼 */
+.header .mobile-menu-close {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+/* X 이미지 크기 */
+.header .mobile-menu-close img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+
+
+
+    /* 대분류 세로 정렬 */
+    .header .gnb-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+
+        padding-top: 2rem;
+    }
+
+    .header .gnb-list > li {
+        width: 100%;
+        position: static;
+    }
+
+    /* 대분류 글자 */
+    .header .gnb-list > li > a {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0.3rem 0;
+
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: right;
+
+        white-space: normal;
+        word-break: keep-all;
+
+        transition: color 0.3s ease;
+    }
+
+    /* 중분류 */
+    .header .gnb .sub-menu {
+        position: static;
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+
+        padding: 0;
+        transform: none;
+        clip-path: none;
+        text-align: right;
+
+        transition: max-height 0.4s ease;
+    }
+
+    /* 클릭한 대분류의 중분류 표시 */
+    .header .submenu-toggle[aria-expanded="true"] + .sub-menu {
+        max-height: 180px;
+        visibility: visible;
+        padding-top: 0.5rem;
+    }
+
+    .header .sub-menu a {
+        display: block;
+        padding: 0.4rem 0;
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 400;
+        white-space: normal;
+        word-break: keep-all;
+    }
+
+    /* PC 드롭다운 배경 제거 */
+    .header::before {
+        display: none;
+    }
+
+
+    /* 메뉴 닫힌 상태 */
+    .header .gnb {
+        display: block;
+
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition:
+            transform 0.4s ease,
+            opacity 0.4s ease,
+            visibility 0.4s;
+    }
+
+    /* 메뉴 열린 상태 */
+    .header.is-mobile-open .gnb {
+        display: block;
+
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .mobile-menu-close img {
+        display: block;
+    }
+
+    /* 태블릿 & 모바일 대메뉴 호버 */
+    .header .gnb-list > li > a:hover {
+        color: var(--ashley-red);
+        font-weight: 800;
+    }
+
+    .header .submenu-toggle[aria-expanded="true"] {
+    color: var(--ashley-red);
+    font-weight: 800;
+}
+
+}
+
+
+
+/* ----------------- 푸터 반응형 -------------------- */
+
+
+        /* --------------1401px 이하------------------ */
+
+        @media screen and (min-width: 1401px) {
+
+            .footer-inner {
+                grid-template-rows: auto auto;
+                row-gap: 0;
+                align-content: center;
+                align-items: center;
+            }
+
+            .footer-info-left,
+            .footer-info-right {
+                align-self: center;
+                margin: 0;
+                transform: translateY(65px);
+            }
+
+            .footer-brand-buttons {
+                align-self: center;
+                transform: translateY(-65px);
+            }
+
+            .footer-envelope-wrap {
+                grid-row: 1 / 3;
+                align-self: center;
+                display: flex;
+            }
+        }
+
+
+        /* ---------------TABLET : 601px ~ 1400px--------------- */
+
+        @media screen and (min-width: 601px) and (max-width: 1400px) {
+
+            .footer-main {
+                min-height: auto;
+                padding: 55px 40px 45px;
+            }
+
+            .footer-main::after {
+                inset: 20px;
+                border-width: 1px;
+            }
+
+            .footer-inner {
+                width: 100%;
+                max-width: 650px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .footer-info {
+                width: 100%;
+            }
+
+            .footer-info-left,
+            .footer-info-right {
+                position: static;
+                width: 100%;
+                transform: none;
+                align-self: center;
+            }
+
+            .footer-info-left {
+                order: 1;
+            }
+
+            .footer-info-right {
+                order: 2;
+                margin-top: 12px;
+            }
+
+            .footer-info-left p,
+            .footer-info-right p {
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: center;
+            }
+
+            .footer-envelope-wrap {
+                display: none;
+            }
+
+            .footer-brand-buttons {
+                order: 3;
+                position: static;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                width: 100%;
+                height: auto;
+                gap: 20px;
+                margin: 24px 0 0;
+                transform: none;
+            }
+
+            .footer-brand-btn {
+                position: static;
+                width: 140px;
+                height: 40px;
+                transform: none;
+                flex-shrink: 0;
+                font-size: 16px;
+            }
+
+            .footer-mobile-contact {
+                order: 4;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                margin: 20px 0 0;
+                transform: none;
+                text-align: center;
+            }
+
+            .footer-mobile-contact p,
+            .footer-mobile-contact a {
+                font-size: 15px;
+                line-height: 1.4;
+                text-align: center;
+            }
+
+            .flower {
+                top: 58%;
+                right: 100px;
+            }
+
+            .left-flower {
+                left: 100px;
+                right: auto;
+            }
+
+            .flower img {
+                width: 70px;
+            }
+
+            .footer-bottom-inner {
+                width: min(calc(100% - 50px), 700px);
+                min-height: 55px;
+            }
+
+            .footer-bottom-inner span {
+                font-size: 20px;
+            }
+        }
+
+        /* --------------10. MOBILE : 600px 이하--------------- */
+
+        @media screen and (max-width: 600px) {
+
+            .footer-main {
+                min-height: auto;
+                padding: 38px 28px 30px;
+            }
+
+            .footer-main::after {
+                inset: clamp(8px, 2.5vw, 16px);
+                border: 1px solid #FFF5E9;
+            }
+
+            .footer-inner {
+                width: 100%;
+                max-width: 420px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0;
+            }
+
+            .footer-info {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0;
+            }
+
+            .footer-info-left,
+            .footer-info-right {
+                position: static;
+                width: 100%;
+                transform: none;
+                align-self: center;
+            }
+
+            .footer-info-left {
+                order: 1;
+            }
+
+            .footer-info-right {
+                order: 2;
+                margin-top: 8px;
+            }
+
+            .footer-info-left p,
+            .footer-info-right p {
+                width: 100%;
+                font-size: 16px;
+                line-height: 1.4;
+                text-align: center;
+                word-break: keep-all;
+            }
+
+            .footer-envelope-wrap {
+                display: none;
+            }
+
+            .footer-brand-buttons {
+                order: 3;
+                position: static;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                width: 100%;
+                height: auto;
+                gap: clamp(10px, 4vw, 20px);
+                margin: 18px 0 0;
+                transform: none;
+            }
+
+            .footer-brand-btn {
+                position: static;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: clamp(95px, 28vw, 125px);
+                height: clamp(30px, 9vw, 38px);
+                font-size: 16px;
+                border-width: 1px;
+                flex-shrink: 0;
+                transform: none;
+            }
+
+            .footer-mobile-contact {
+                order: 4;
+                position: static;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                gap: 3px;
+                margin: 18px 0 0;
+                text-align: center;
+                transform: none;
+            }
+
+            .footer-mobile-contact p,
+            .footer-mobile-contact a {
+                font-size: 16px;
+                line-height: 1.4;
+                text-align: center;
+                overflow-wrap: anywhere;
+            }
+
+            .flower {
+                top: 58%;
+                right: clamp(30px, 4vw, 80px);
+            }
+
+            .left-flower {
+                left: clamp(30px, 4vw, 80px);
+                right: auto;
+            }
+
+            .flower img {
+                width: clamp(28px, 8vw, 45px);
+            }
+
+            .footer-bottom-inner {
+                width: calc(100% - 30px);
+                min-height: 42px;
+                gap: 8px;
+            }
+
+            .footer-bottom-inner span {
+                font-size: clamp(14px, 3.5vw, 18px);
+            }
+        }
+
+        /* 11. SMALL MOBILE : 375px 이하 */
+
+        @media screen and (max-width: 375px) {
+
+            .footer-main {
+                padding: 32px 24px 25px;
+            }
+
+            .footer-main::after {
+                inset: 8px;
+            }
+
+            .footer-info-left p,
+            .footer-info-right p {
+                font-size: 14px;
+                line-height: 1.35;
+            }
+
+            .footer-info-right {
+                margin-top: 6px;
+            }
+
+            .footer-brand-buttons {
+                gap: 12px;
+                margin-top: 15px;
+            }
+
+            .footer-brand-btn {
+                width: 90px;
+                height: 30px;
+                font-size: 14px;
+            }
+
+            .footer-mobile-contact {
+                margin-top: 14px;
+            }
+
+            .footer-mobile-contact p,
+            .footer-mobile-contact a {
+                font-size: 14px;
+            }
+
+            .flower {
+                right: 10px;
+            }
+
+            .left-flower {
+                left: 10px;
+                right: auto;
+            }
+
+            .flower img {
+                width: 26px;
+            }
+
+            .footer-bottom-inner {
+                width: calc(100% - 24px);
+                gap: 5px;
+            }
+
+            .footer-bottom-inner span {
+                font-size: 14px;
+            }
+        }
+
+
+        /* 12. ACCESSIBILITY */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .flower img {
+                animation: none;
+            }
+
+            .envelope-letter,
+            .letter-content,
+            .envelope-open,
+            .footer-brand-btn {
+                transition-duration: 0.01ms;
+            }
+        }

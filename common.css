@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+:root {
+    /* =========================
+       01. COMMON COLORS
+    ========================= */
+
+    --color-white: #FAFAFA;
+    --color-black: #17171B;
+    --color-burgundy: #572A30;
+
+    --color-gray: rgba(23, 23, 27, 0.5);
+    --color-deep-gray: rgba(23, 23, 27, 0.8);
+    
+    --footer-blue: #8CB0C7;
+
+
+    /* =========================
+       02. ELAND EATS
+    ========================= */
+
+    --eland-yellow: #FFF0B2;
+    --eland-skyblue: #6BB5E3;
+
+
+    /* =========================
+       03. ASHLEY
+    ========================= */
+
+    --ashley-red: #871E22;
+    --ashley-blue: #102848;
+    --ashley-yellow: #FED677;
+    --ashley-ivory: #FFF5E9;
+
+
+    /* =========================
+       04. THE CAFFE
+    ========================= */
+
+    --caffe-beige: #FBEEE1;
+}
+
+@font-face {
+    font-family: 'ELandNice';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ELandChoice';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ELandChoice';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_M.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ELandChoice';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_B.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+    @font-face {
+    font-family: 'Bickham Script Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bickham Script Pro Regular'), url('Bickham Script Pro Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bickham Script Pro Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bickham Script Pro Semibold'), url('Bickham Script Pro Semibold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bickham Script Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bickham Script Pro Bold'), url('Bickham Script Pro Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: "Abyssinica SIL";
+    src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/abyssinicasil/AbyssinicaSIL-Regular.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

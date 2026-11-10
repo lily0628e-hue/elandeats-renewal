@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elandeats</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="header.css">
+    <link href="https://db.onlinewebfonts.com/c/893fdce7fe8ecb381f012ce2edd2dd6c?family=against-Regular" rel="stylesheet">
+    <script src="header.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <header class="site-header">
+            <div class="header-inner">
+                <h1 class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="이랜드이츠">
+                    </a>
+                </h1>
+                <nav class="pc-nav" aria-label="주 메뉴">
+                    <ul class="gnb">
+                        <li class="gnb-brand">
+                            <a href="#brand" class="gnb-link">
+                                OUR BRAND
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#recruit" class="gnb-link">
+                                채용문의
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#franchise" class="gnb-link">
+                                가맹문의
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 햄버거 버튼 -->
+                <button class="menu-open"
+                        type="button"
+                        aria-label="메뉴 열기"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- PC 전체 서브메뉴 -->
+            <div class="mega-menu" id="brand">
+                <div class="mega-inner">
+
+                    <div class="mega-column">
+                        <h3>뷔페</h3>
+                        <ul>
+                            <li><a href="ashley.html">애슐리</a></li>
+                            <li><a href="#">자연별곡</a></li>
+                            <li><a href="#">로운</a></li>
+                            <li><a href="#">피자몰</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-column">
+                        <h3>다이닝</h3>
+                        <ul>
+                            <li><a href="#">피자몰</a></li>
+                            <li><a href="#">리미니</a></li>
+                            <li><a href="#">테루</a></li>
+                            <li><a href="#">반궁</a></li>
+                            <li><a href="#">스테이크어스</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-column">
+                        <h3>델리</h3>
+                        <ul>
+                            <li><a href="ashley.html">델리 by애슐리</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-column">
+                        <h3>카페·베이커리</h3>
+                        <ul>
+                            <li><a href="thecaffe.html">더카페</a></li>
+                            <li><a href="#">카페루고</a></li>
+                            <li><a href="#">페르케노</a></li>
+                            <li><a href="#">프랑제리</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </header>
+            <!-- 모바일 전체 메뉴 -->
+            <div class="mobile-menu" id="mobile-menu">
+                <button class="menu-close"
+                        type="button"
+                        aria-label="메뉴 닫기">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="mobile-menu-inner">
+                    <a href="index.html" class="mobile-logo">
+                        <img src="images/logo.png" alt="이랜드이츠">
+                    </a>
+                    <nav class="mobile-nav" aria-label="모바일 메뉴">
+                        <ul class="mobile-gnb">
+                            <li class="mobile-brand">
+                                <button class="mobile-brand-btn"
+                                        type="button"
+                                        aria-expanded="false">
+                                    브랜드
+                                </button>
+                                <div class="mobile-submenu">
+                                    <div class="mobile-category">
+                                        <button type="button"
+                                                class="category-btn">
+                                            뷔페
+                                        </button>
+                                        <ul class="category-list">
+                                            <li><a href="ashley.html">애슐리</a></li>
+                                            <li><a href="#">자연별곡</a></li>
+                                            <li><a href="#">로운</a></li>
+                                            <li><a href="#">피자몰</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mobile-category">
+                                        <button type="button"
+                                                class="category-btn">
+                                            다이닝
+                                        </button>
+                                        <ul class="category-list">
+                                            <li><a href="#">피자몰</a></li>
+                                            <li><a href="#">리미니</a></li>
+                                            <li><a href="#">테루</a></li>
+                                            <li><a href="#">반궁</a></li>
+                                            <li><a href="#">스테이크어스</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mobile-category">
+                                        <button type="button"
+                                                class="category-btn">
+                                            델리
+                                        </button>
+                                        <ul class="category-list">
+                                            <li><a href="ashley.html">델리 by애슐리</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mobile-category">
+                                        <button type="button"
+                                                class="category-btn">
+                                            카페·베이커리
+                                        </button>
+                                        <ul class="category-list">
+                                            <li><a href="thecaffe.html">더카페</a></li>
+                                            <li><a href="#">카페루고</a></li>
+                                            <li><a href="#">페르케노</a></li>
+                                            <li><a href="#">프랑제리</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#recruit" class="mobile-link">
+                                    채용문의
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#franchise" class="mobile-link">
+                                    가맹문의
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-visual">
+                <div class="hero-img">
+                    <img src="images/main-hero1.png" alt="이랜드이츠 대표 메뉴" class="active">
+                    <img src="images/main-hero2.png" alt="이랜드이츠 브랜드 메뉴">
+                </div>
+                <div class="hero-txt">
+                    <div class="hero-tit">
+                        <h3>
+                            <img src="images/Eats.png" alt="Eats, Always Great!">
+                        </h3>
+                        <h5 class="against-sky text">Meet Our Brands</h5>
+                        <img class="hero-arrow" src="images/Back-Arrow.png" alt="아래로 이동">
+                        <ul class="button-area">
+                            <li class="caffe-btn">
+                                <a href="thecaffe.html">
+                                    <span class="against">The Caffe</span>
+                                    <span>더카페</span>
+                                </a>
+                            </li>
+                            <li class="ashely-btn">
+                                <a href="ashley.html">
+                                    <span class="against">Ashley Queens</span>
+                                    <span>애슐리 퀸즈</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mission">
+            <div class="top-text decoeats">
+                <p>Eats, Always Great!Eats, Always Great!Eats, Always Great!Eats, Always Great!</p>
+            </div>
+            <div class="mission-content">
+                <div class="mission-txt">
+                    <h5>
+                        <img src="images/MISSION.png" alt="MISSION">
+                    </h5>
+                    <h6>
+                        이랜드이츠는 모두가 누리는<br>
+                        맛있는 세상을 만들어갑니다
+                    </h6>
+                </div>
+                <div class="mission-hide">
+                    <p>
+                        합리적인 가격과 최고의 품질로 '모두가 누리는 세상'을 만들어 갑니다.<br>
+                        1980년, 이랜드는 '누구나 부담 없는 가격으로<br>
+                        예쁜 옷을 입을 수 있는 세상'을 꿈꾸며 출발했습니다.<br>
+                        그 후 패션, 유통, 외식, 호텔, 건설, 엔터테인먼트로,<br>
+                        국내를 넘어 해외까지 전 세계 고객의 일상에 더 가까이 다가갔습니다.<br>
+                        인종, 성별, 나이, 소득에 상관 없이 '누구나 최고를 누릴 수 있도록',<br>
+                        이랜드는 늘 고객의 일상 속에 함께하겠습니다.
+                    </p>
+                </div>
+                <ul class="mission-img">
+                    <li><img src="images/food.png" alt="음식"></li>
+                    <li><img src="images/dessert.png" alt="디저트"></li>
+                    <li><img src="images/cafe.png" alt="카페"></li>
+                </ul>
+            </div>
+            <div class="bottom-text decoeats">
+                <p>Eats, Always Great!Eats, Always Great!Eats, Always Great!Eats, Always Great!</p>
+            </div>
+        </section>
+        <section class="brand" id="brand-section">
+            <h2>
+                <img src="images/Our-Brands-pc.png" alt="Our Brands">
+            </h2>
+            <ul class="brand-list against">
+                <li>
+                    <h4>ASHLEY QUEENS</h4>
+                    <div class="brand-box">
+                        <h5>ASHLEY QUEENS</h5>
+                    </div>
+                </li>
+                <li>
+                    <h4>PIZZA MALL</h4>
+                    <div class="brand-box">
+                        <h5>PIZZA MALL</h5>
+                    </div>
+                </li>
+                <li>
+                    <h4>RIMINI GARDEN</h4>
+                    <div class="brand-box">
+                        <h5>RIMINI GARDEN</h5>
+                    </div>
+                </li>
+                <li>
+                    <h4>LOUN SHABU BUFFET</h4>
+                    <div class="brand-box">
+                        <h5>LOUN SHABU BUFFET</h5>
+                    </div>
+                </li>
+                <li>
+                    <h4>FRANGERIE</h4>
+                    <div class="brand-box">
+                        <h5>FRANGERIE</h5>
+                    </div>
+                </li>
+                <li>
+                    <h4>THE CAFFE</h4>
+                    <div class="brand-box">
+                        <h5>THE CAFFE</h5>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="value">
+            <h2><img src="images/Our-Value-pc.png" alt="Our Value"></h2>
+            <div class="value-wrap">
+                <ul class="value-content">
+                    <li class="value-img"><img src="images/value.png" alt="가치"></li>
+                    <li class="value-box">
+                        <ul class="value-tit">
+                            <li>자람</li>
+                            <li class="against">Growth</li>
+                        </ul>
+                        <div class="value-text">
+                            <p>직장은 인생의 학교입니다.</p>
+                        </div>
+                    </li>
+                    <li class="value-box">
+                        <ul class="value-tit">
+                            <li>나눔</li>
+                            <li class="against">Sharing</li>
+                        </ul>
+                        <div class="value-text">
+                            <p>벌기 위해서가 아니라 쓰기 위해서 일합니다.</p>
+                        </div>
+                    </li>
+                    <li class="value-box">
+                        <ul class="value-tit">
+                            <li>섬김</li>
+                            <li class="against">Serving</li>
+                        </ul>
+                        <div class="value-text">
+                            만족한 고객이 최선의 광고입니다.
+                        </div>
+                    </li>
+                    <li class="value-box">
+                        <ul class="value-tit">
+                            <li>바름</li>
+                            <li class="against">Rightness</li>
+                        </ul>
+                        <div class="value-text">
+                            돌아가더라도 바른 길을 가는 것이 지름길입니다.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="career">
+            <div class="career-content">
+                <div class="career-tit">
+                    <h4>
+                        <img src="images/Career-pc.png" alt="Career">
+                    </h4>
+                    <h5>
+                        <img src="images/Elandeats-pc.png" alt="Elandeats">
+                    </h5>
+                </div>
+                <div class="career-box">
+                    <h6 class="mulgyul">
+                        이랜드이츠와 함께할 당신을 초대합니다.
+                    </h6>
+                    <div class="career-slider">
+                        <ul class="career-img">
+                            <li><img src="images/career1.png" alt="채용사진1"></li>
+                            <li><img src="images/career2.png" alt="채용사진2"></li>
+                            <li><img src="images/career3.png" alt="채용사진3"></li>
+                            <li><img src="images/career4.png" alt="채용사진4"></li>
+                            <li><img src="images/career5.png" alt="채용사진5"></li>
+                            <li><img src="images/career6.png" alt="채용사진6"></li>
+                            <li><img src="images/career7.png" alt="채용사진7"></li>
+                            <li><img src="images/career8.png" alt="채용사진8"></li>
+                        </ul>
+                    </div>
+                    <div class="career-text">
+                        <p>
+                            우리의 고객을 이해하고 고객에게 더 나은 가치를 줄 수 있다면<br>
+                            학력, 성별, 나이에 상관없이 누구에게나 기회가 주어지는 곳입니다.
+                        </p>
+                    </div>
+                    <a href="#" class="career-btn">
+                        <span>채용 안내</span>
+                        <img src="images/Forward-Button.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="flower left-flower">
+                <img src="images/flower-ivory.png" alt="꽃">
+            </div>
+            <div class="footer-inner">
+                <div class="footer-info footer-info-left">
+                    <p>
+                        (주)이랜드이츠 인천광역시<br>
+                        미추홀구 염전로 336, 1층,<br>
+                        2층 일부호 (주안동, 비트나원스)
+                    </p>
+                </div>
+                <div class="footer-envelope-wrap">
+                    <div class="footer-envelope" tabindex="0">
+                        <div class="envelope-letter">
+                            <img class="letter-paper" src="images/footer-paper.png" alt="편지지">
+                            <div class="letter-content">
+                                <p>
+                                    매장 이용관련<br>
+                                    문의 및 불편사항
+                                </p>
+                                <a href="mailto:elandfood@eland.co.kr">
+                                    elandfood@eland.co.kr
+                                </a>
+                            </div>
+                        </div>
+                        <img class="envelope-front" src="images/footer-front.png" alt="편지봉투">
+                        <img class="stamp" src="images/stamp-ivory.png" alt="왁스">
+                        <span class="envelope-open">OPEN</span>
+                    </div>
+                </div>
+                <div class="footer-info footer-info-right">
+                    <p>
+                        사업자 등록번호 : 514-86-01083<br>
+                        대표이사 : 황성윤<br>
+                        개인정보보호 책임자 : 황성윤
+                    </p>
+                </div>
+                <div class="footer-brand-buttons">
+                    <a href="thecaffee.html" class="footer-brand-btn">
+                        The Caffe
+                    </a>
+                    <a href="ashely.html" class="footer-brand-btn">
+                        Ashley
+                    </a>
+                </div>
+                <div class="footer-mobile-contact">
+                    <p>매장 이용관련 문의 및 불편사항</p>
+                    <a href="mailto:elandfood@eland.co.kr">
+                        elandfood@eland.co.kr
+                    </a>
+                </div>
+            </div>
+            <div class="flower right-flower">
+                <img src="images/flower-ivory.png" alt="꽃">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>Copyright©</span>
+                <span>2026</span>
+                <span>ELAND EATS</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

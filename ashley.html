@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ashley</title>
+    <link rel="stylesheet" href="ashley.css">
+    <link rel="stylesheet" href="common.css">
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+
+        $(function(){
+
+            $(".now-tab-btn").click(function(){
+
+                // 1. 클릭한 버튼의 data-tab 값 가져오기
+                let tabName = $(this).data("tab");
+
+                // 2. 모든 버튼에서 active 제거
+                $(".now-tab-btn").removeClass("active");
+
+                // 3. 클릭한 버튼에만 active 추가
+                $(this).addClass("active");
+
+                // 4. 모든 탭 콘텐츠 숨기기
+                $(".tab-event-list, .tab-news-list").removeClass("active");
+
+                // 5. 선택한 콘텐츠만 보여주기
+                $("#" + tabName).addClass("active");
+
+            });
+
+        });
+
+
+        // 음식 슬라이드를 위한 제이쿼리 
+        $(function(){
+            // 원본 메뉴 8개 복제
+            $(".season-list li").clone().appendTo(".season-list");
+        });
+
+
+        // Top 버튼 제이쿼리
+        $(function(){
+            // 스크롤하면 TOP 버튼 나타나기
+            $(window).scroll(function(){
+
+                if($(this).scrollTop() > 300){
+                    $(".top-btn").addClass("active");
+                } else {
+                    $(".top-btn").removeClass("active");
+                }
+
+            });
+
+            // TOP 버튼 클릭하면 맨 위로 이동
+            $(".top-btn").click(function(){
+
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+<!----------------- 헤더 ---------------->
+
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="#">
+                <img src="images/ashley-header-logo.png" alt="애슐리">
+            </a>
+
+            <button
+                class="menu-btn"
+                type="button"
+                aria-label="전체 메뉴 열기"
+                aria-controls="main-navigation"
+                aria-expanded="false"
+            >
+                <img src="images/header-hamberger.png" alt="햄버거버튼">
+            </button>
+
+            <nav class="gnb" id="main-navigation" aria-label="주 메뉴">
+                <div class="mobile-menu-top">
+                    <button
+                        class="mobile-menu-close"
+                        type="button"
+                        aria-label="전체 메뉴 닫기"
+                    >
+                        <img src="images/header-close.png" alt="닫기버튼">
+                    </button>
+
+                    <a class="mobile-menu-logo" href="#">
+                        <img src="images/ashley-header-logo.png" alt="애슐리">
+                    </a>
+                </div>
+
+                <ul class="gnb-list">
+                    <li>
+                        <a href="#submenu-eland" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-eland">
+                            이랜드이츠
+                        </a>
+                        <ul class="sub-menu" id="submenu-eland">
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">채용문의</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#submenu-brand" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-brand">
+                            OUR BRAND
+                        </a>
+                        <ul class="sub-menu" id="submenu-brand">
+                            <li><a href="thecaffe.html">더카페</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">메뉴 ∙ 가격</a></li>
+
+                    <li>
+                        <a href="#submenu-store" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-store">
+                            예약
+                        </a>
+                        <ul class="sub-menu" id="submenu-store">
+                            <li><a href="#">대기등록 ∙ 조회</a></li>
+                            <li><a href="#">매장정보</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">고객센터</a></li>
+
+                    <li>
+                        <a href="#submenu-franchise" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-franchise">
+                            마이페이지
+                        </a>
+                        <ul class="sub-menu" id="submenu-franchise">
+                            <li><a href="#">캐시/적립</a></li>
+                            <li><a href="#">나의 구매 영수증</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+<!---------------- 메인 ----------------->
+    <main>
+
+
+
+        <!-- 메인 비주얼 영역  -->
+        <section class="main-visual">
+            <div class="main-visual-inner">
+
+
+                <!-- 메인 비주얼 이미지 컷 4개 -->
+                <ul class="main-visual-pic">
+                    <li class="back-pic"><img src="images/main-visual-img01.png" alt="스테이크 이미지"></li>
+                    <li class="zero-picture"><img src="images/main-visual-img02.png" alt="딸기 이미지"></li>
+                    <li class="zero-picture"><img src="images/main-visual-img03.png" alt="스테이크 세로 이미지"></li>
+                    <li class="zero-picture"><img src="images/main-visual-img04.png" alt="초록 음식 이미지"></li>
+                </ul>
+
+
+                <!-- 메인비주얼 로고 -->
+                <div class="main-v-logo">
+                        <picture>
+                        <source media="(max-width: 1024px)"
+                                srcset="images/tablet-main-visual-logo.png">
+                    <img src="images/main-visual-logo-group.png" alt="메인비주얼 로고">
+                </div>
+
+
+                <!-- 메인비주얼 스크롤 -->
+                <div class="main-v-scroll">
+                        <picture>
+                        <source media="(max-width: 1024px)"
+                            srcset="images/tablet-main-visual-scroll-arrow.png">
+                    <img src="images/icon-scroll-arrow.png" alt="메인비주얼 스크롤바">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 인트로&시그니처가 포함되는 남색 영역 -->
+        <div class="back-navy-area">
+
+
+            <!-- 브랜드 인트로 백그라운드 종이 -->
+            <div class="brand-paper-area">
+                <!-- 브랜드 인트로 영역  -->
+                <section class="brand-intro">
+                    <div class="brand-intro-inner">
+
+                        <!-- 브랜드 타이틀 -->
+                        <div class="brand-title">
+
+                            <div class="brand-title-track">
+
+                                <!-- 첫번째 묶음 -->
+                                <div class="brand-title-group">
+                                    <img src="images/title-ashley-queens.png" alt="애슐리퀸즈 타이틀">
+                                    <img src="images/title-World-Gourmet-Buffet.png" alt="세계 뷔페 타이틀">
+                                </div>
+
+                                <!-- 반복용 묶음 -->
+                                <div class="brand-title-group" aria-hidden="true">
+                                    <img src="images/title-ashley-queens.png" alt="애슐리퀸즈 타이틀">
+                                    <img src="images/title-World-Gourmet-Buffet.png" alt="세계 뷔페 타이틀">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- 브랜드 상징물 -->
+                        <div class="brand-id">
+                            <img src="images/ashley-brand-identity.png" alt="브랜드 상징물">
+                        </div>
+
+
+                        <!-- 브랜드 설명 -->
+                        <ul class="brand-txt">
+
+                            <li>
+                                세계 미각을 담은 아메리칸 테이블 ‘애슐리퀸즈’ <br>
+                                애슐리퀸즈(Ashley Queens)는 아메리칸 푸드를 현대적인 감각으로 재해석하여 <br>
+                                엄선된 식재료와 다양한 글로벌 메뉴를 한 자리에서 경험할 수 있는 공간입니다. <br>
+                                세계 미각을 담아 고객들에게 차별화 된 다이닝 경험을 제공합니다.
+                            </li>
+
+                            <li><img src="images/ashley-arnuvo.png" alt="문양"></li>
+
+                            <li>
+                                <p>
+                                    A flagship brand by E-Land Eats that offers a wide selection of <br>
+                                    over 200 dishes from around the world at reasonable prices, <br>
+                                    dedicated to bringing the best culinary experiences to its customers. 
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- 시그니처 어워드  -->
+            <section class="signature-award">
+                <div class="signature-award-inner">
+
+
+                    <!-- 최상단 요소 3개 -->
+                    <ul class="award-top">
+                        <li>ASHLEY QUEENS</li>
+                        <li>2026</li>
+                        <li>ELAND EATS</li>
+                    </ul>
+
+
+                    <!-- 시그니처 어워드 본문 -->
+                    <ul class="award-txt">
+                        <li>2026.10.20 ~ 2026.11. 03</li>
+
+                        <li><h2>SIGNATURE AWARD</h2></li>
+
+                        <li>
+                            <p>
+                                애슐리 시그니처 어워드 대국민 투표 진행 중! <br>
+                                애슐리를 대표하는 시그니처 메뉴 중 당신의 마음을 사로잡은 메뉴를 선택하세요.
+                            </p>
+                        </li>
+                    </ul>
+
+                    <!-- 어워드 설명 아래 -->
+                    <a href="#" class="award-mobile-vote">Vote Now</a>
+
+                    <!-- 시그니처 어워드 액자 영역 -->
+                    <ul class="award-frame-list">
+
+                        <!-- 01. 왼쪽 피자 액자 -->
+                        <li class="award-frame pizza-frame">
+                            <img src="images/signature-left.png" alt="피자 메뉴">
+                        </li>
+
+                        <!-- 02. 중앙 치킨 액자 -->
+                        <li class="award-frame chicken-frame">
+
+                            <a href="#" class="award-vote">
+
+                                <!-- 기본 이미지 -->
+                                <img
+                                    src="images/signature-center-defult.png"
+                                    alt="치킨 메뉴"
+                                    class="chicken-default"
+                                >
+
+                                <!-- hover 이미지 -->
+                                <img
+                                    src="images/signature-center-hover.png"
+                                    alt="치킨 호버시 어두워지는 사진"
+                                    class="chicken-hover"
+                                >
+
+                                <!-- 투표 버튼 -->
+                                <span class="vote-btn">Vote Now</span>
+
+                            </a>
+
+                        </li>
+
+                        <!-- 03. 오른쪽 샐러드 액자 -->
+                        <li class="award-frame salad-frame">
+                            <img src="images/signature-right.png" alt="샐러드 메뉴">
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- 애슐리 프로모션  -->
+        <section class="ashley-now">
+            <div class="ashley-now-inner">
+
+                <!-- 나우 타이틀 -->
+                <div class="now-title">
+                    <img src="images/title-Ashley-now.png" alt="애슐리 나우">
+                </div>
+
+
+                <!-- 탭 버튼 -->
+                <div class="now-tab-menu">
+                    <button class="now-tab-btn active" data-tab="event">
+                        EVENTS
+                    </button>
+
+                    <button class="now-tab-btn" data-tab="news">
+                        NEWS
+                    </button>
+                </div>
+
+
+                <!-- 탭 콘텐츠 -->
+                <div class="tab-content">
+
+                    <!-- EVENTS -->
+                    <ul class="tab-event-list active" id="event">
+                        <li>
+                            <a href="#">
+                                <img src="images/brand-events01.png" alt="이벤트 클럽데이 이미지">
+                            </a>
+                            <p class="tab-sub-txt">APP 회원 한정</p>
+                            <h3>슐리던트 클럽데이</h3>
+                            <p class="tab-sub-day">26.10.27 ~ 26.10.28</p>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="images/brand-events02.png" alt="이벤트 가을 당첨자 이미지">
+                            </a>
+                            <p class="tab-sub-txt">Autumn Check in</p>
+                            <h3>이벤트 당첨자 발표</h3>
+                            <p class="tab-sub-day">26.10.13 ~ 26.10.31</p>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="images/brand-events03.png" alt="이벤트 스테이크 무제한 이미지">
+                            </a>
+                            <p class="tab-sub-txt">일부 매장 한정</p>
+                            <h3>디너주말 무제한 스테이크</h3>
+                            <p class="tab-sub-day">26.09.29 ~ 26.10.30</p>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="images/brand-events04.png" alt="이벤트 디너 무제한 이미지">
+                            </a>
+                            <p class="tab-sub-txt">디너, 주말 한정</p>
+                            <h3>그릴&비어 무제한 뷔페</h3>
+                            <p class="tab-sub-day">26.07.23 ~ 26.10.31</p>
+                        </li>
+                    </ul>
+
+
+                    <!-- NEWS -->
+                    <ul class="tab-news-list" id="news">
+                        <li>
+                            <a href="https://blog.naver.com/your_ashley/224441866268">
+                                <img src="images/brand-news01.png" alt="뉴스 아시아 메뉴 이미지">
+                            </a>
+                            <p class="tab-sub-txt">애슐리퀸즈 가을 신메뉴</p>
+                            <h3>ASIA Market Tour</h3>
+                            <p class="tab-sub-day">2026.10.14</p>
+                        </li>
+
+                        <li>
+                            <a href="https://blog.naver.com/your_ashley/224399440266">
+                                <img src="images/brand-news02.png" alt="뉴스 가을 메뉴 이미지">
+                            </a>
+                            <p class="tab-sub-txt">애슐리퀸즈 가을 신메뉴</p>
+                            <h3>Autumn Selection</h3>
+                            <p class="tab-sub-day">2026.09.03</p>
+                        </li>
+
+                        <li>
+                            <a href="https://blog.naver.com/your_ashley/224388590497">
+                                <img src="images/brand-news03.png" alt="뉴스 여름 종료 이미지">
+                            </a>
+                            <p class="tab-sub-txt">애슐리퀸즈 시즌 소식</p>
+                            <h3>여름 시즌 종료 안내</h3>
+                            <p class="tab-sub-day">2026.08.24</p>
+                        </li>
+
+                        <li>
+                            <a href="https://blog.naver.com/your_ashley/224328921973">
+                                <img src="images/brand-news04.png" alt="뉴스 for kids 이미지">
+                            </a>
+                            <p class="tab-sub-txt">애슐리퀸즈 시즌 소식</p>
+                            <h3>FOR KIDS 메뉴 안내</h3>
+                            <p class="tab-sub-day">2026.06.27</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- 탭 밑 더보기 -->
+                <div class="tab-now-more">
+                    <a href="https://blog.naver.com/your_ashley">
+                    <h3>VIEW ALL ASHLEY QUEENS NEWS</h3>
+                    <img src="images/ashleynow-arrow-bottom.png" alt="바로가기 화살표">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- 애슐리 신메뉴 -->
+        <section class="new-season-menu">
+            <div class="season-menu-inner">
+            <h2>ASHLEY'S NEW AUTUMN MENU</h2>
+
+            <!-- 애슐리 신메뉴 사진 -->
+            <ul class="season-list">
+
+                <li>
+                    <img src="images/new-menu-food01.png" alt="통살치킨 사진">
+                    <h3>대만식 바질 통살 치킨</h3>
+                    <p class="menu-en">Taiwan-Style Basil Fried Chicken</p>
+                    <p class="menu-desc">
+                        대만 닝샤 야시장의 인기 메뉴에서 영감을 받은 메뉴 
+                        바삭한 통살 치킨에 향긋한 바질과 참나물을 더해 
+                        은은한 허브 향과 고소한 풍미를 즐길 수 있는 대만식 치킨
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food02.png" alt="오징어 난반 사진">
+                    <h3>규슈식 오징어 난반</h3>
+                    <p class="menu-en">Kyushu-Style Squid Nanban</p>
+                    <p class="menu-desc">
+                        쫀득하고 오독한 오징어 목살을 바삭하게 튀겨낸 
+                        가라아게! 타르타르소스와 함께 곁들여 
+                        일본식 난반 스타일로 즐겨보세요
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food03.png" alt="동파육 사진">
+                    <h3>과바오로 즐기는 한입 동파육</h3>
+                    <p class="menu-en">Bite-Sized Dongpo Pork for Gua Bao</p>
+                    <p class="menu-desc">
+                        달큰한 간장소스에 촉촉하게 조린 동파육을 
+                        바오번과 함께 먹기 좋은 한입 크기로 담아낸 메뉴 
+                        부드러운 동파육을 바오번에 넣고 토핑과 함께 싸서 
+                        대만식 과바오로 즐겨보세요
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food04.png" alt="타코야끼 사진">
+                    <h3>오사카식 네기 타코야키</h3>
+                    <p class="menu-en">Osaka-Style Negi Takoyaki</p>
+                    <p class="menu-desc">
+                        따뜻하게 튀겨낸 타코야끼에 향긋한 대파와 
+                        고소한 마요네즈를 듬뿍 올린 오사카식 타코야끼 
+                        겉은 바삭하고 속은 부드러운 타코야끼를 따뜻하게 즐겨보세요
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food05.png" alt="감자볼 사진">
+                    <h3>강원도식 쫀득 감자볼</h3>
+                    <p class="menu-en">Gangwon-Style Chewy Potato Balls</p>
+                    <p class="menu-desc">
+                        강원도식으로 쫀득쫀득하게 만든 감자 간식!
+                        좋아하는 소스에 콕! 찍어 즐겨보세요!
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food06.png" alt="채소 볶음 사진">
+                    <h3>중화식 채소 볶음</h3>
+                    <p class="menu-en">Chinese-Style Stir-Fried Vegetables</p>
+                    <p class="menu-desc">
+                        청경채와 버섯을 센 불에 볶아 은은한 불향과 
+                        아삭한 식감을 살린 대만식 채소 볶음 
+                        동파육과 함께 곁들여 더욱 풍성하게 즐겨보세요
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food07.png" alt="냉국 사진">
+                    <h3>매콤 새콤 오이 냉국</h3>
+                    <p class="menu-en">Spicy & Tangy Chilled Cucumber Soup</p>
+                    <p class="menu-desc">
+                        아삭한 오이에 칼칼하고 시원한 국물을 더한 오이 냉국 
+                        입안을 깔끔하게 씻어주는 산뜻한 맛으로 
+                        다양한 메뉴와 함께 곁들여보세요
+                    </p>
+                </li>
+
+                <li>
+                    <img src="images/new-menu-food08.png" alt="무 떡볶이">
+                    <h3>부산식 가을 무 떡볶이</h3>
+                    <p class="menu-en">Busan-Style Autumn Radish Tteokbokki</p>
+                    <p class="menu-desc">
+                        쫀득한 가래떡과 무를 함께 끓여내 
+                        달큰한 무의 맛이 은은하게 우러나는 부산식 떡볶이
+                        깊은 맛의 국물과 쫄깃한 가래떡을 함께 즐겨보세요
+                    </p>
+                </li>
+
+            </ul>
+            </div>
+        </section>
+
+
+
+        <!-- 애슐리 그랜드 오픈 매장 -->
+        <section class="grand-open">
+        <div class="grand-open-inner">
+
+            <div class="grand-open-title"><img src="images/grandopen-title.png" alt="타이틀"></div>
+            <div class="grand-pic">
+                <img src="images/grandopen-paju.png" alt="그랜드오픈 파주">
+                <img src="images/grandopen-seongnam.png" alt="그랜드오픈 성남">
+            </div>
+
+        </div>
+        </section>
+
+
+
+        <!-- 애슐리 매장 찾기 -->
+        <section class="store-finder">
+            <div class="store-finder-inner">
+
+                <!-- 종이 애슐리 이미지 -->
+                <img
+                    src="images/bottom-ashley.png"
+                    alt="ASHLEY QUEENS 종이 페이퍼 이미지"
+                    class="finder-paper"
+                >
+
+                <!-- 매장찾기 버튼 -->
+                <a href="#" class="finder-button">
+                    <img src="images/bottom-icon-search.png" alt="돋보기 아이콘">
+                    <span>애슐리 퀸즈 매장 찾기</span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- TOP 버튼 -->
+        <button type="button" class="top-btn" aria-label="맨 위로 이동">
+            <img src="images/icon-top-arrow.png" alt="탑 이동 버튼">
+        </button>
+        
+    </main>
+
+
+
+
+<!---------------- 푸터 ----------------->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="flower left-flower">
+                <img src="images/flower-ivory.png" alt="꽃">
+            </div>
+            <div class="footer-inner">
+                <div class="footer-info footer-info-left">
+                    <p>
+                        (주)이랜드이츠 인천광역시<br>
+                        미추홀구 염전로 336, 1층,<br>
+                        2층 일부호 (주안동, 비트나원스)
+                    </p>
+                </div>
+                <div class="footer-envelope-wrap">
+                    <div class="footer-envelope" tabindex="0">
+                        <div class="envelope-letter">
+                            <img class="letter-paper" src="images/footer-paper.png" alt="편지지">
+                            <div class="letter-content">
+                                <p>
+                                    매장 이용관련<br>
+                                    문의 및 불편사항
+                                </p>
+                                <a href="mailto:elandfood@eland.co.kr">
+                                    elandfood@eland.co.kr
+                                </a>
+                            </div>
+                        </div>
+                        <img class="envelope-front" src="images/footer-front.png" alt="편지봉투">
+                        <img class="stamp" src="images/stamp-ivory.png" alt="왁스">
+                        <span class="envelope-open">OPEN</span>
+                    </div>
+                </div>
+                <div class="footer-info footer-info-right">
+                    <p>
+                        사업자 등록번호 : 514-86-01083<br>
+                        대표이사 : 황성윤<br>
+                        개인정보보호 책임자 : 황성윤
+                    </p>
+                </div>
+                <div class="footer-brand-buttons">
+                    <a href="index.html" class="footer-brand-btn">
+                        Eland Eats
+                    </a>
+                    <a href="thecaffe.html" class="footer-brand-btn">
+                        The Caffe
+                    </a>
+                </div>
+                <div class="footer-mobile-contact">
+                    <p>매장 이용관련 문의 및 불편사항</p>
+                    <a href="mailto:elandfood@eland.co.kr">
+                        elandfood@eland.co.kr
+                    </a>
+                </div>
+            </div>
+            <div class="flower right-flower">
+                <img src="images/flower-ivory.png" alt="꽃">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>Copyright©</span>
+                <span>2026</span>
+                <span>ELAND EATS</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!----------------- 헤더 스크립트 ---------------->
+    <script>
+        const header = document.querySelector(".header");
+        const navigation = header.querySelector(".gnb");
+        const menuButton = header.querySelector(".menu-btn");
+        const closeButton = header.querySelector(".mobile-menu-close");
+        const submenuButtons = header.querySelectorAll(".submenu-toggle");
+        const mobileScreen = window.matchMedia("(max-width: 1024px)");
+        function setSubmenus(isOpen, selectedButton = null) {
+            submenuButtons.forEach(function (button) {
+                const isSelected = selectedButton === null || selectedButton === button;
+                button.setAttribute("aria-expanded", String(isOpen && isSelected));
+            });
+        }
+        function setDesktopDropdown(isOpen) {
+            header.classList.toggle("is-dropdown-open", isOpen);
+            setSubmenus(isOpen);
+        }
+        function setMobilePanel(isOpen) {
+            header.classList.toggle("is-mobile-open", isOpen);
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            setSubmenus(false);
+        }
+        menuButton.addEventListener("click", function () {
+            setMobilePanel(true);
+            closeButton.focus();
+        });
+        closeButton.addEventListener("click", function () {
+            setMobilePanel(false);
+            menuButton.focus();
+        });
+        submenuButtons.forEach(function (button) {
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (!mobileScreen.matches) return;
+                const wasOpen = button.getAttribute("aria-expanded") === "true";
+                setSubmenus(!wasOpen, button);
+            });
+        });
+        navigation.addEventListener("pointerenter", function (event) {
+            if (!mobileScreen.matches && event.pointerType === "mouse") {
+                setDesktopDropdown(true);
+            }
+        });
+        header.addEventListener("pointerleave", function (event) {
+            if (!mobileScreen.matches && event.pointerType === "mouse") {
+                setDesktopDropdown(false);
+            }
+        });
+        header.addEventListener("focusout", function (event) {
+            if (!mobileScreen.matches && !header.contains(event.relatedTarget)) {
+                setDesktopDropdown(false);
+            }
+        });
+        document.addEventListener("click", function (event) {
+            if (!mobileScreen.matches && !header.contains(event.target)) {
+                setDesktopDropdown(false);
+            }
+        });
+        header.addEventListener("keydown", function (event) {
+            if (event.key !== "Escape") return;
+            if (mobileScreen.matches && header.classList.contains("is-mobile-open")) {
+                setMobilePanel(false);
+                menuButton.focus();
+            } else if (header.classList.contains("is-dropdown-open")) {
+                const submenu = event.target.closest(".sub-menu");
+                if (submenu) {
+                    submenu.previousElementSibling.focus();
+                }
+                setDesktopDropdown(false);
+            }
+        });
+        mobileScreen.addEventListener("change", function () {
+            setMobilePanel(false);
+            setDesktopDropdown(false);
+        });
+    
+    </script>
+</body>
+</html>

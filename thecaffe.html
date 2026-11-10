@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The caffe</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="thecaffe.css">
+
+    <script src="thecaffe.js" defer></script>
+
+</head>
+    <body id="page-top">
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="#">
+                <img src="images/header-logo.png" alt="더카페">
+            </a>
+
+            <button
+                class="menu-btn"
+                type="button"
+                aria-label="전체 메뉴 열기"
+                aria-controls="main-navigation"
+                aria-expanded="false"
+            >
+                <img src="images/header-hamberger.png" alt="햄버거버튼">
+            </button>
+
+            <nav class="gnb" id="main-navigation" aria-label="주 메뉴">
+                <div class="mobile-menu-top">
+                    <button
+                        class="mobile-menu-close"
+                        type="button"
+                        aria-label="전체 메뉴 닫기"
+                    >
+                        <img src="images/header-close.png" alt="닫기버튼">
+                        <span class="mobile-menu-x" aria-hidden="true">×</span>
+                    </button>
+
+                    <a class="mobile-menu-logo" href="#">
+                        <img src="images/header-logo.png" alt="더카페">
+                    </a>
+                </div>
+
+                <ul class="gnb-list">
+                    <li>
+                        <a href="#submenu-eland" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-eland">
+                            이랜드이츠
+                        </a>
+                        <ul class="sub-menu" id="submenu-eland">
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">채용문의</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#submenu-brand" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-brand">
+                            OUR BRAND
+                        </a>
+                        <ul class="sub-menu" id="submenu-brand">
+                            <li><a href="ashley.html">애슐리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">메뉴</a></li>
+
+                    <li>
+                        <a href="#submenu-store" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-store">
+                            매장
+                        </a>
+                        <ul class="sub-menu" id="submenu-store">
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">점주인터뷰</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#submenu-franchise" class="submenu-toggle" role="button"
+                            aria-expanded="false" aria-controls="submenu-franchise">
+                            창업
+                        </a>
+                        <ul class="sub-menu" id="submenu-franchise">
+                            <li><a href="#">창업지원</a></li>
+                            <li><a href="#">창업비용</a></li>
+                            <li><a href="#">창업 경쟁력</a></li>
+                            <li><a href="#">창업문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="main-hero">
+            <div class="hero-viewport">
+            
+                <ul class="hero-track">
+                <li class="hero-slide">
+                    <picture class="hero-picture">
+                        <source media="(400px <= width <= 768px)"
+                                srcset="images/tablet-mainhero01.png">
+                        <source media="(width < 768px)"
+                                srcset="images/mobile-hero01.png">
+                        <img src="images/main-hero01.jpg"
+                            alt="밤과 크림을 곁들인 시즌 커피"
+                            fetchpriority="high">
+                    </picture>
+                    <div class="hero-copy">
+                        <h1>
+                            <span>CHESTNUT</span><br>
+                            MOMENTS
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            밤과 흑임자, 깊어지는 고소함
+                        </p>
+
+                        <p class="hero-description">
+                            새롭게 만날 밤과 부드러운 크림이 만나는 계절.<br>
+                            더카페에서 달콤한 가을의 여유를 즐겨보세요.
+                        </p>
+
+                        <a class="button button-wine" href="#menu">
+                            메뉴 둘러보기 →
+                        </a>
+                    </div>
+                </li>
+
+                <!-- 두 번째 배너 -->
+            <li class="hero-slide">
+                <picture class="hero-picture">
+                    <source media="(410px <= width <= 768px)"
+                            srcset="images/tablet-mainhero02.png">
+                    <source media="(width < 768px)" srcset="images/mobile-hero02.png">
+                    <img src="images/main-hero02.jpg"
+                        alt="딸기 디저트와 음료로 즐기는 크리스마스 시즌 메뉴">
+                </picture>
+
+                <div class="hero-copy">
+                    <h1>
+                        <span>BERRY</span><br>
+                        CHRISTMAS
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        딸기로 더 달콤한 크리스마스
+                    </p>
+
+                    <p class="hero-description">
+                        새콤달콤한 딸기와 부드러운 크림이 만나는 계절.<br>
+                        더카페에서 특별한 겨울의 여유를 즐겨보세요.
+                    </p>
+
+                    <a class="button button-wine" href="#menu">
+                        메뉴 둘러보기 →
+                    </a>
+                </div>
+            </li>
+
+            <!-- 세 번째 배너 -->
+            <li class="hero-slide">
+                <picture class="hero-picture">
+                    <source media="(410px <= width <= 768px)"
+                    srcset="images/tablet-mainhero03.png">
+                    <source media="(width < 768px)" srcset="images/mobile-hero03.png">
+                    <img src="images/main-hero03.jpg"
+                        alt="피스타치오와 초콜릿의 풍미를 담은 음료">
+                </picture>
+
+                <div class="hero-copy">
+                    <h1>
+                        <span>TAKE A</span><br>
+                        FO-REST
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        달콤하게 즐기는 일상 속 휴식
+                    </p>
+
+                    <p class="hero-description">
+                        진한 초콜릿과 부드러운 말차, 고소한 풍미.<br>
+                        더카페와 함께 즐기는 나만의 여유를 만나보세요.
+                    </p>
+
+                    <a class="button button-wine" href="#menu">
+                        메뉴 둘러보기 →
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="hero-dots" role="group" aria-label="메인 배너 선택">
+    <button type="button" class="hero-dot" aria-label="첫 번째 배너" aria-current="true"></button>
+    <button type="button" class="hero-dot" aria-label="두 번째 배너"></button>
+    <button type="button" class="hero-dot" aria-label="세 번째 배너"></button>
+    </div>
+</section>
+
+        <section class="brand-about">
+            <div class="about-layout">
+
+                <!-- 왼쪽사진 -->
+                <div class="about-image about-img-left">
+                    <img src="images/about-img01.jpg"alt="왼쪽이미지">
+                </div>
+
+                <!-- 텍스트 -->
+                <div class="about-text">
+
+                    <!-- 모바일에서만 보일 브랜드 이미지 -->
+                    <div class="about-mobile-image">
+                        <img src="images/about-mobile-img.jpg" alt="모바일용 브랜드 이미지">
+                    </div>
+
+                    <h2 class="about-title">
+                        ABOUT<br>
+                        THE CAFFE
+                    </h2>
+
+                    <p>
+                        20년의 전문성, 한 잔에 담은 정성.<br>
+                        산지에서 직수입한 100% 아라비카 생두.<br>
+                        더카페 소속 국제공인 큐그레이더가 엄선하고<br>
+                        로스팅 전문가가 직접 팩토리에서 매일 정성껏 로스팅합니다.<br>
+                        좋은 원두를 향한 우리의 오래된 선택과 커피.<br>
+                        더카페에서 일상 속 한 잔의 여유를 만나보세요.
+                    </p>
+
+                    <a href="#" class="text-btn btn-brown">
+                        브랜드 이야기 보기 
+                    </a>
+                </div>
+
+                <!-- 오른쪽 이미지 -->
+                <div class="about-image about-image-right">
+                    <img  src="images/about-img02.jpg" alt="오른쪽 사진">
+                </div>
+
+            </div>
+        </section>
+        <!-- 필기체 슬로건 -->
+        <div class="brand-slogan">
+            <p>The Secret to a Softer Moment.</p>
+        </div>
+
+        <!-- 시그니처 메뉴 소개 -->
+        <section class="signature">
+            <div class="signature-layout">
+
+                <div class="signature-text">
+                    <h2 class="section-title">SIGNATURE</h2>
+
+                    <h3 class="signature-subtitle">
+                        부드러움의 비밀, <b>시크릿라떼</b>
+                    </h3>
+
+                    <p>
+                        더카페는 우유와 크림의 조화로운 비율을 연구해<br>
+                        시크릿라떼만의 깊고 부드러운 맛을 완성했습니다.<br>
+                        커피에 우유의 고소함과 크림의 풍부함을 더해<br>
+                        한 모금마다 진하게 느껴지는 특별한 한 잔.<br>
+                        더카페의 시그니처, 시크릿라떼를 만나보세요.
+                    </p>
+
+                    <a href="#" class="text-btn btn-outline">
+                        시그니처 메뉴 보기 →
+                    </a>
+                </div>
+
+                <div class="signature-image">
+                    <img src="images/Signature-img.jpg"  alt="시그니처 이미지">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 커피 · 티 -->
+        <section class="coffee-menu">
+            <div class="coffee-inner">
+
+                <div class="coffee-heading">
+                    <img src="images/title-line.png" alt="" class="title-line">
+                    <h2>COFFEE &amp; TEA</h2>
+                    <img src="images/title-line.png" alt="" class="title-line">
+                </div>
+                <ul class="coffee-list">
+
+                    <li class="coffee-item">
+                        <a href="#">
+                            <div class="coffee-image">
+                                <img src="images/menu01.png" alt="">
+                            </div>
+                            <p class="coffee-name">아메리카노</p>
+                        </a>
+                    </li>
+
+                    <li class="coffee-item">
+                        <a href="#">
+                            <div class="coffee-image">
+                                <img src="images/menu02.png" alt="">
+                            </div>
+                            <p class="coffee-name">시크릿 바닐라 라떼</p>
+                        </a>
+                    </li>
+
+                    <li class="coffee-item">
+                        <a href="#">
+                            <div class="coffee-image">
+                                <img src="images/menu03.png" alt="">
+                            </div>
+                            <p class="coffee-name">시크릿 라떼슈페너</p>
+                        </a>
+                    </li>
+
+                    <li class="coffee-item">
+                        <a href="#">
+                            <div class="coffee-image">
+                                <img src="images/menu04.png" alt="">
+                            </div>
+                            <p class="coffee-name">헛개 아메리카노</p>
+                        </a>
+                    </li>
+
+                    <li class="coffee-item">
+                        <a href="#">
+                            <div class="coffee-image">
+                                <img src="images/menu05.png" alt="">
+                            </div>
+                            <p class="coffee-name">콜드 아인슈페너</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- 사이드 메뉴 : 캐러셀 -->
+        <section class="side-menu">
+            <div class="side-inner">
+
+                <div class="side-title">
+                    <h2 class="side-title-menu">SIDE MENU</h2>
+                    <p>커피와 함께 즐기는 맛있는 즐거움</p>
+                </div>
+
+                <div class="side-carousel">
+
+                    <!-- 이전 버튼 -->
+                    <a href="#" class="side-prev" aria-label="이전 버튼">
+                        <img src="images/arrow-left.png" alt="이전버튼">
+                    </a>
+
+                    <!-- 메뉴가 보이는 창 -->
+                    <div class="side-viewport">
+
+                        <!-- 가로로 이동할 메뉴 묶음 -->
+                        <ul class="side-track">
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img01.png" alt="츄러스">
+                                </div>
+
+                                <h3>츄러스</h3>
+                                <p>	바삭한 식감에 달콤한 시나몬 향,
+                                    커피와 함께 즐기기 좋은 좋은 달콤함</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img02.png" alt="핫도그">
+                                </div>
+
+                                <h3>핫도그</h3>
+                                <p>바삭한 빵, 짭조름한 소시지의 조화
+                                    출출한 순간 든든하게 채워주는 간식</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img03.png" alt="옥수수">
+                                </div>
+
+                                <h3>옥수수</h3>
+                                <p>톡톡 터지는 알갱이 속 고소함<br>
+                                    한 입씩 베어 먹는 재미</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img04.png" alt="알감자">
+                                </div>
+
+                                <h3>알감자</h3>
+                                <p>	노릇한 겉면과 포슬포슬한 속살<br> 한입 크기로 간편하게 즐기세요</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img05.png" alt="호두과자">
+                                </div>
+
+                                <h3>호두과자</h3>
+                                <p> 달콤한 팥과 고소한 호두의 만남<br> 
+                                    따뜻한 커피와 잘 어울리는 한입 간식</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img06.png" alt="붕어빵">
+                                </div>
+
+                                <h3>붕어빵</h3>
+                                <p>달콤한 속을 가득 채운 붕어빵 <br>익숙하고 포근한 맛으로 더하는 여유</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img07.png" alt="대파크림치즈소금빵">
+                                </div>
+
+                                <h3>대파크림치즈소금빵</h3>
+                                <p>향긋한 대파와 부드러운 크림치즈 <br>
+                                    한 입 가득 퍼지는 고소하고 풍부한 맛</p>
+                            </li>
+
+                            <li class="side-item">
+                                <div class="side-image">
+                                    <img src="images/side-img08.png" alt="무화과월넛크림치즈베이글">
+                                </div>
+
+                                <h3>무화과월넛크림치즈베이글</h3>
+                                <p>무화과의 달콤함, 호두의 고소함<br>부드러운 크림치즈로 완성한 한 입</p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- 다음 버튼 -->
+                    <a href="#"class="side-next" aria-label="다음 버튼" >
+                        <img src="images/arrow-right.png" alt="다음버튼">
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 매장 찾기 -->
+        <section class="store-finder">
+            <div class="store-lnner"> 
+
+                <div class="store-text">
+                    <h2 class="section-title">FIND A STORE</h2>
+
+                    <h3 class="store-subtitle">
+                        당신의 일상 가까이,<br>
+                        <span>더카페</span>
+                    </h3>
+
+                    <p>
+                        향긋한 커피가 생각나는 순간,<br>
+                        바쁜 하루 속 잠깐의 여유가 필요할 때.<br>
+                        가까운 더카페에서 취향에 맞는 음료와<br>
+                        달콤한 디저트를 함께 즐겨보세요.<br>
+                        당신의 일상에 편안한 한 잔을 더합니다.
+                    </p>
+
+                    <a href="#" class="text-btn btn-brown">
+                        전체 매장 찾기 →
+                    </a>
+                </div>
+
+                <picture class="store-image">
+                    <source media="(width < 768px)" srcset="images/mobile-store-img.jpg">
+                    <img src="images/store-img.jpg" alt="더카페 매장">
+                </picture>
+
+            </div>
+        </section>
+
+        <!-- 신규 매장 : 카드 3개 고정 배치 -->
+        <section class="new-openings">
+            <div class="new-inner">
+
+                <h2 class="section-title">NEW OPENINGS</h2>
+
+                <ul class="opening-list">
+
+                    <li class="opening-card">
+                        <div class="opening-image">
+                            <img src="images/open-img01.jpg" alt="대덕 테크노밸리점 이미지">
+                        </div>
+
+                        <div class="opening-info">
+                            <p class="opening-label">GRAND OPENING</p>
+                            <h3>더카페 대덕 테크노밸리점</h3>
+
+                            <a href="#" class="text-btn btn-outline">
+                                매장 정보 보기 →
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="opening-card">
+                        <div class="opening-image">
+                            <img src="images/open-img02.jpg" alt="수원성대역점 이미지">
+                        </div>
+
+                        <div class="opening-info">
+                            <p class="opening-label">GRAND OPENING</p>
+                            <h3>더카페X페르케노 수원성대역점</h3>
+
+                            <a href="#" class="text-btn btn-outline">
+                                매장 정보 보기 →
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="opening-card">
+                        <div class="opening-image">
+                            <img src="images/open-img03.jpg" alt="대구호산점 이미지">
+                        </div>
+
+                        <div class="opening-info">
+                            <p class="opening-label">GRAND OPENING</p>
+                            <h3>더카페 대구 호산점</h3>
+
+                            <a href="#" class="text-btn btn-outline">
+                                매장 정보 보기 →
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- 창업 안내 : 배경 이미지는 CSS로 적용 -->
+        <section class="franchise">
+            <div class="fran-inner">
+
+                <div class="fran-container">
+                    <h2 class="section-title">
+                        TOGETHER WITH
+                        <span>THE CAFFE</span>
+                    </h2>
+
+                    <p class="franchise-subtitle">
+                        당신의 카페,<br>
+                        <b>더카페</b>와 함께 시작하세요.
+                    </p>
+
+                    <p class="franchise-description">
+                        좋은 커피를 향한 마음이 당신의 매장이 될 수 있도록.<br>
+                        자체 로스팅 팩토리와 이랜드의 운영 노하우를 바탕으로,<br>
+                        창업 교육부터 오픈 후 매장 관리까지 함께합니다.
+                    </p>
+
+                    <a href="#" class="text-btn btn-brown">창업 안내 보기 →</a>
+                </div>
+
+            </div>
+        </section>
+            <div class="closing-slogan">
+                <p lang="en">The Story of Best Coffee</p>
+            </div>
+</main>
+    </main>
+        <footer class="footer">
+        <div class="footer-main">
+            <div class="flower left-flower">
+                <img src="images/flower-ivory.png" alt="꽃">
+            </div>
+            <div class="footer-inner">
+                <div class="footer-info footer-info-left">
+                    <p>
+                        (주)이랜드이츠 인천광역시<br>
+                        미추홀구 염전로 336, 1층,<br>
+                        2층 일부호 (주안동, 비트나원스)
+                    </p>
+                </div>
+                <div class="footer-envelope-wrap">
+                    <div class="footer-envelope" tabindex="0">
+                        <div class="envelope-letter">
+                            <img class="letter-paper" src="images/footer-paper.png" alt="편지지">
+                            <div class="letter-content">
+                                <p>
+                                    매장 이용관련<br>
+                                    문의 및 불편사항
+                                </p>
+                                <a href="mailto:elandfood@eland.co.kr">
+                                    elandfood@eland.co.kr
+                                </a>
+                            </div>
+                        </div>
+                        <img class="envelope-front" src="images/footer-front.png" alt="편지봉투">
+                        <img class="stamp" src="images/stamp-ivory.png" alt="왁스">
+                        <span class="envelope-open">OPEN</span>
+                    </div>
+                </div>
+                <div class="footer-info footer-info-right">
+                    <p>
+                        사업자 등록번호 : 514-86-01083<br>
+                        대표이사 : 황성윤<br>
+                        개인정보보호 책임자 : 황성윤
+                    </p>
+                </div>
+                <div class="footer-brand-buttons">
+                    <a href="index.html" class="footer-brand-btn">
+                        Eland Eats
+                    </a>
+                    <a href="ashley.html" class="footer-brand-btn">
+                        Ashley
+                    </a>
+                </div>
+                <div class="footer-mobile-contact">
+                    <p>매장 이용관련 문의 및 불편사항</p>
+                    <a href="mailto:elandfood@eland.co.kr">
+                        elandfood@eland.co.kr
+                    </a>
+                </div>
+            </div>
+            <div class="flower right-flower">
+                <img src="images/flower-ivory.png" alt="꽃">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>Copyright©</span>
+                <span>2026</span>
+                <span>ELAND EATS</span>
+            </div>
+        </div>
+    </footer>
+    <a href="#page-top" class="top-btn" aria-label="페이지 맨 위로 이동">
+    <span aria-hidden="true">↑</span>
+    <span>TOP</span>
+    </a>
+</body>
+</html>
