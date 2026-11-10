@@ -108,7 +108,7 @@
         align-items: center;
         height: var(--header-height);
         white-space: nowrap;
-        font-weight: 700;
+        font-weight: 600;
         transition: color 0.3s ease;
     }
     /*gnb 대메뉴 컬러 변경 */
@@ -804,6 +804,7 @@ main {
         background-color: transparent;
         color: #fff5e9;
         font-size: 12px;
+        translate: 0 -5px;
     }
 
     .hero-dot {
@@ -1056,15 +1057,21 @@ main {
 ========================= */
 
 .brand-slogan {
-    padding: clamp(10px, 3vw, 20px) var(--section-gutter) clamp(0px, calc(3vw - 23px), 20px);
+    padding-top: clamp(24px, 6vw, 50px);
     text-align: center;
 }
 
+@media (width <= 768px) {
+    .brand-slogan {
+        padding-top: 0;
+    }
+}
+
 .brand-slogan p {
-    font-family: "Bickham Script Pro Regular", cursive;
-    font-size: clamp(60px, 7.3vw, 140px);
+    font-family: 'Bickham', cursive;
+    font-size: clamp(45px, 7.3vw, 140px);
+    padding-block: calc(clamp(12px, 4vw, 40px) + 8px) clamp(12px, 4vw, 40px);
     line-height: 1.15;
-    padding-bottom: clamp(8px, 1.5vw, 15px);
     text-wrap: balance;
     color: #5d4940;
 }
@@ -1076,7 +1083,7 @@ main {
 ========================= */
 
 .signature {
-    padding: clamp(12px, 2vw, 32px) 0 var(--section-gap);
+    padding: 0 0 var(--section-gap);
 }
 
 .signature-text {
@@ -1106,8 +1113,8 @@ main {
 }
 
 .signature-text > p {
-    margin-top: 32px;
-    font-size: clamp(16px, 1.04vw, 20px);
+    padding: 8px 0 ;
+    font-size: clamp(14px, 1.04vw, 20px);
     line-height: 1.6;
     word-break: keep-all;
 }
@@ -1334,7 +1341,7 @@ COFFEE & TEA
 
 .side-item h3 {
     margin-top: 20px;
-    font-size: clamp(18px, 1.25vw, 24px);
+    font-size: clamp(16px, 1.15vw, 22px);
     font-weight: 400;
     overflow-wrap: normal;
     word-break: keep-all;
@@ -1665,13 +1672,13 @@ COFFEE & TEA
 ========================= */
 
 .closing-slogan {
-    padding: clamp(30px, 5vw, 35px) 30px clamp(12px, 2.5vw, 10px);
+    padding: clamp(30px, 5vw, 56px) 30px clamp(20px, 5vw, 40px);
     text-align: center;
 }
 
 .closing-slogan p {
     margin: 0;
-    font-family: "Bickham Script Pro Regular", cursive;
+    font-family: 'Bickham', cursive;
     font-size: clamp(32px, 4vw, 76px);
     line-height: 1.2;
     color: #322723;
@@ -1734,6 +1741,9 @@ COFFEE & TEA
 
     .side-item p {
         font-size: 16px;
+        word-break: keep-all;
+        text-wrap: balance;
+        overflow-wrap: break-word;
     }
 
     .side-carousel {
@@ -1793,6 +1803,14 @@ COFFEE & TEA
         display: none;
     }
 
+    .brand-about {
+    padding-top: 50px;
+}
+
+    .about-layout {
+    flex-direction: column;
+}
+
     .about-layout {
         flex-direction: column;
     }
@@ -1821,8 +1839,8 @@ COFFEE & TEA
 
     .about-text > p {
         max-width: 440px;
-        margin: 12px auto 0;
-        padding-bottom: 12px;
+        margin: 20px auto 0;
+        font-size: clamp(15px, calc(13px + 0.56vw), 17px);
         line-height: 1.5;
         order: 1;
     }
@@ -1884,14 +1902,14 @@ COFFEE & TEA
     .signature-text > p {
         grid-row: 4;
         max-width: 440px;
-        margin: 30px auto 0;
+        margin: 22px auto 0;
         font-size: 16px;
         line-height: 1.7;
     }
 
     .signature-text > a {
         grid-row: 5;
-        margin: 30px auto 0;
+        margin: 15px auto 0;
         width: min(100%, 200px);
         height: auto;
         min-height: 48px;
@@ -1913,7 +1931,7 @@ COFFEE & TEA
     }
 
     .coffee-heading h2 {
-        font-size: 24px;
+        font-size: 22px;
         white-space: nowrap;
     }
 
@@ -1927,13 +1945,13 @@ COFFEE & TEA
     }
 
     .coffee-item {
-        flex: 0 0 30%;
+        flex: 0 0 40%;
         scroll-snap-align: start;
         padding-inline: 8px;
     }
 
     .coffee-menu {
-        padding-bottom: 56px;
+        padding-bottom: 30px;
     }
 
     .coffee-heading .title-line {
@@ -1942,17 +1960,17 @@ COFFEE & TEA
     }
 
     .side-title-menu {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .side-title > p {
-        margin-top: 8px;
+        margin-top: 5px;
         font-size: 16px;
     }
 
     .side-carousel {
         display: block;
-        margin-top: 32px;
+        margin-top: 40px;
     }
 
     .side-carousel > a {
@@ -1978,7 +1996,7 @@ COFFEE & TEA
         flex: 0 0 44%;
         box-sizing: border-box;
         width: auto;
-        padding: 0 4px;
+        padding: 0 5px;
     }
 
     .side-image {
@@ -1989,17 +2007,18 @@ COFFEE & TEA
 
     .side-item h3 {
         font-size: clamp(14px, calc(10.47px + 0.98vw), 18px);
-        margin-top: 16px;
+        margin-top: 20px;
     }
 
     .side-item p {
-        margin-top: 4px;
-        font-size: clamp(14px, 2.1vw, 16px);
+        margin-top: 6px;
+        font-size: clamp(12px, 2.1vw, 16px);
+        
     }
 
     .side-menu {
         padding-top: 32px;
-        padding-bottom: 56px;
+        padding-bottom: 40px;
     }
 
     .store-lnner {
@@ -2017,13 +2036,13 @@ COFFEE & TEA
         grid-row: 1;
         font-size: clamp(22px, 3.125vw, 24px);
         letter-spacing: 0;
-        margin-top: clamp(0px, calc(6.12745vw - 15px), 25px);
+        margin-top: 10px;
     }
 
     .store-subtitle {
         grid-row: 2;
         margin-top: clamp(10px, 2vw, 15px);
-        font-size: clamp(18px, 2.6vw, 20px);
+        font-size: clamp(20px, 2.6vw, 20px);
     }
 
     .store-subtitle br {
@@ -2032,7 +2051,7 @@ COFFEE & TEA
 
     .store-image {
         grid-row: 3;
-        margin-top: 28px;
+        margin-top: 30px;
     }
 
     .store-image img {
@@ -2058,7 +2077,7 @@ COFFEE & TEA
     }
 
     .store-finder {
-        padding-bottom: 100px;
+        padding-bottom: 80px;
     }
 
     .store-text .section-title::after {
@@ -2077,7 +2096,7 @@ COFFEE & TEA
     .fran-container {
         padding: 0;
         background-color: transparent;
-        margin-top:30px;
+        margin-top:20px;
     }
 
     .fran-container .section-title {
@@ -2094,7 +2113,7 @@ COFFEE & TEA
     }
 
     .franchise {
-        padding: 50px 0;
+        padding: 70px 0;
     }
 
 }
@@ -2105,7 +2124,6 @@ COFFEE & TEA
         width: min(100%, 200px);
         min-height: clamp(44px, calc(35.3px + 2.174vw), 52px);
         padding: 12px;
-        margin-top: clamp(12px, calc(1.41px + 2.94vw), 24px);
         font-size: 16px;
     }
 }
@@ -2380,7 +2398,7 @@ COFFEE & TEA
             left: 48%;
             transform: translate(-50%, -50%);
             z-index: 200;
-            font-family: 'Bickham Script Pro Semibold';
+            font-family: 'Bickham';
             font-size: 50px;
             letter-spacing: -2px;
             color: var(--color-burgundy);
