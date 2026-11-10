@@ -1154,7 +1154,6 @@ TOP 버튼
             position: relative;
             width: 100%;
             min-height: 500px;
-            background-color: var(--footer-blue);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1398,7 +1397,7 @@ TOP 버튼
             left: 48%;
             transform: translate(-50%, -50%);
             z-index: 200;
-            font-family: 'Bickham Script Pro Semibold';
+            font-family: 'Bickham';
             font-size: 50px;
             letter-spacing: -2px;
             color: var(--color-burgundy);
@@ -1470,7 +1469,7 @@ TOP 버튼
         }
 
         .footer-bottom-inner span {
-            font-family: "against";
+            font-family: 'against-regular';
             font-size: clamp(16px, 2vw, 18px);
             white-space: nowrap;
         }

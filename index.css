@@ -613,7 +613,7 @@ body{
 
 .decoeats p {
     width: max-content;
-    font-family: 'Bickham Script Pro Semibold';
+    font-family: 'Bickham';
     font-size: clamp(35px, 5vw, 200px);
     color: var(--ashley-yellow)
 }
@@ -1957,7 +1957,7 @@ body{
 }
 
 .footer-brand-btn {
-    font-family: "Abyssinica SIL";
+    font-family: 'Abyssinica SIL';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2058,7 +2058,7 @@ body{
 .letter-content a {
     margin-top: 5px;
     font-size: clamp(16px, 1vw, 18px);
-    font-family: "Abyssinica SIL";
+    font-family: 'Abyssinica SIL';
     color: var(--color-burgundy);
 }
 
@@ -2088,7 +2088,7 @@ body{
     left: 48%;
     transform: translate(-50%, -50%);
     z-index: 200;
-    font-family: 'Bickham Script Pro Semibold';
+    font-family: 'Bickham';
     font-size: 50px;
     letter-spacing: -2px;
     color: var(--color-burgundy);

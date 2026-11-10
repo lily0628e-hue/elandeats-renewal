@@ -40,17 +40,21 @@
     --caffe-beige: #FBEEE1;
 }
 
+/* ELAND NICE */
 @font-face {
     font-family: 'ELandNice';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
     font-display: swap;
 }
 
+/* ELAND CHOICE */
 @font-face {
     font-family: 'ELandChoice';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff') format('woff');
     font-weight: 300;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -58,6 +62,7 @@
     font-family: 'ELandChoice';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_M.woff') format('woff');
     font-weight: 500;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -65,36 +70,47 @@
     font-family: 'ELandChoice';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_B.woff') format('woff');
     font-weight: 700;
+    font-style: normal;
     font-display: swap;
 }
 
-    /* Regular */
+/* BICKHAM */
 @font-face {
     font-family: 'Bickham';
     src: url('./fonts/Bickham-Script-Pro-Regular.woff') format('woff');
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* Semibold */
 @font-face {
     font-family: 'Bickham';
     src: url('./fonts/Bickham-Script-Pro-Semibold.woff') format('woff');
-    font-style: normal;
     font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* Bold */
 @font-face {
     font-family: 'Bickham';
     src: url('./fonts/Bickham-Script-Pro-Bold.woff') format('woff');
-    font-style: normal;
     font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
-    @font-face {
+/* ABYSSINICA SIL */
+@font-face {
     font-family: 'Abyssinica SIL';
     src: url('./fonts/AbyssinicaSIL-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'against-regular';
+    src: url('./fonts/against-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
